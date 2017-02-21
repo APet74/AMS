@@ -210,7 +210,7 @@
                                     </li>
                                 </ul>
                                 <ul id="myTab" style="margin-top: 1px;">
-                                    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 no-padding" style="border-right: 1px solid #555;"><a href="#themeforest" role="tab" data-toggle="tab"><i class="fa fa-star" style="color: #1abc9c"></i> Item 1<span class="desc"> description</span></a></li>
+                                    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 no-padding" style="border-right: 1px solid #555;"><a href="#themeforest" role="tab" data-toggle="tab"><i class="fa fa-home" style="color: #b70002"></i> Pegboard Links<span class="desc"> Links to all Pegboard Pages.</span></a></li>
                                     <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 no-padding" style="border-right: 1px solid #555;"><a href="#codecanyon" role="tab" data-toggle="tab"><i class="fa fa-star" style="color: #e78733;"></i> Item 2<span class="desc"> description</span></a></li>
                                     <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 no-padding" style="border-right: 1px solid #555;"><a href="#videohive" role="tab" data-toggle="tab"><i class="fa fa-star" style="color: #e7a802;"></i> Item 3<span class="desc"> description</span></a></li>
                                     <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 no-padding" style="border-right: 1px solid #555;"><a href="#activeden" role="tab" data-toggle="tab"><i class="fa fa-star" style="color: #d35400;"></i> Item 4<span class="desc"> description</span></a></li>
@@ -231,31 +231,21 @@
                                     <div class="tab-pane" id="themeforest">
                                         <ul class="row">
                                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dropdown-header text-center" style="margin: 0 -1px; width: calc(100% + 2px); padding:0 15px;">
-                                                <h4 style="background: #1abc9c; color: white;">
-                                                    16,000+ Site Templates and Themes from $3
+                                                <h4 style="background: #b70002; color: white;">
+                                                    Pegboard site and pages
                                                 </h4>
                                             </li>
                                         </ul>
                                         <div class="divided">
-                                            <ul class="col-sm-3 col-xs-6 col-md-3 h-divided">
-                                                <li><a href="javascript:void(0);">All Items</a></li>
-                                                <li><a href="javascript:void(0);">WordPress</a></li>
-                                                <li><a href="javascript:void(0);">HTML</a></li>
+                                            <ul class="col-sm-6 col-xs-12 col-md-6 h-divided">
+                                                <li><a href="javascript:void(0);">Home</a></li>
+                                                <li><a href="javascript:void(0);">Show Organizations</a></li>
+                                                <li><a href="javascript:void(0);">Service Requests</a></li>
                                             </ul>
-                                            <ul class="col-sm-3 col-xs-6 col-md-3 h-divided">
-                                                <li><a href="javascript:void(0);">Marketing</a></li>
-                                                <li><a href="javascript:void(0);">CMS <span class="label label-danger pull-right">New</span></a></li>
-                                                <li><a href="javascript:void(0);">eCommerce</a></li>
-                                            </ul>
-                                            <ul class="col-sm-3 col-xs-6 col-md-3 h-divided">
-                                                <li><a href="javascript:void(0);">PSD</a></li>
-                                                <li><a href="javascript:void(0);">Tumblr</a></li>
-                                                <li><a href="javascript:void(0);">Ghost</a></li>
-                                            </ul>
-                                            <ul class="col-sm-3 col-xs-6 col-md-3 h-divided">
-                                                <li><a href="javascript:void(0);">Muse</a></li>
-                                                <li><a href="javascript:void(0);">Plugins</a></li>
-                                                <li><a href="javascript:void(0);">More...</a></li>
+                                            <ul class="col-sm-6 col-xs-12 col-md-6 h-divided">
+                                                <li><a href="javascript:void(0);">My Requests</a></li>
+                                                <li><a href="javascript:void(0);">Manage Service Requests</a></li>
+                                                <li><a href="javascript:void(0);">Reports</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -483,257 +473,6 @@
                         <li class="divider"></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- search form -->
-                        <form class="navbar-form-expanded navbar-form navbar-left visible-lg-block visible-md-block visible-xs-block" role="search">
-                            <div class="input-group">
-                                <input type="text" class="form-control" data-width="80px" data-width-expanded="170px" placeholder="Search" name="query">
-                                <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i>&nbsp;</button></span>
-                            </div>
-                        </form>
-                        <li class="dropdown-grid visible-sm-block">
-                            <a data-toggle="dropdown" href="javascript:void(0);" class="dropdown-toggle"><i class="fa fa-search"></i>&nbsp;</a>
-                            <div class="dropdown-grid-wrapper" role="menu">
-                                <ul class="dropdown-menu col-sm-6">
-                                    <li>
-                                        <form class="no-margin">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control">
-                                                <span class="input-group-btn"><button class="btn btn-default" type="submit">&nbsp;<i class="fa fa-search"></i></button></span>
-                                            </div>
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="dropdown-grid">
-                            <a data-toggle="dropdown" href="javascript:void(0);" class="dropdown-toggle"><i class="fa fa-tasks"></i>&nbsp;<span class="hidden-sm hidden-md reverse">Media</span><span class="caret"></span></a>
-                            <div class="dropdown-grid-wrapper" role="menu">
-                                <ul class="dropdown-menu col-xs-12 col-sm-9 col-md-8 col-lg-7">
-                                    <li>
-                                        <div id="carousel-eg" class="carousel slide" data-ride="carousel">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 divided" >
-                                                    <ol class="carousel-indicators navbar-carousel-indicators h-divided">
-                                                        <li data-target="#carousel-eg" data-slide-to="0" class="active"><a href="javascript:void(0);" class="">Cars<span class="hidden-sm hidden-xs desc">Short description</span></a></li>
-                                                        <li data-target="#carousel-eg" data-slide-to="1" class=""><a href="javascript:void(0);" class="">Animals<span class="hidden-sm hidden-xs desc">Slide with caption</span></a></li>
-                                                        <li data-target="#carousel-eg" data-slide-to="2" class=""><a href="javascript:void(0);" class="">Nature<span class="hidden-sm hidden-xs desc">Short description</span></a></li>
-                                                        <li data-target="#carousel-eg" data-slide-to="3" class=""><a href="javascript:void(0);" class="">City<span class="hidden-sm hidden-xs desc">Short description</span></a></li>
-                                                        <li data-target="#carousel-eg" data-slide-to="4" class=""><a href="javascript:void(0);" class="">Space<span class="hidden-sm hidden-xs desc">Short description</span></a></li>
-                                                    </ol>
-                                                </div>
-                                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                                                    <div class="carousel-inner">
-                                                        <div class="item active">
-                                                            <div class="embed-responsive embed-responsive-16by9">
-                                                                <img class="embed-responsive-item" src="images/cars.jpg">
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="embed-responsive embed-responsive-16by9">
-                                                                <img class="embed-responsive-item" src="images/animals.jpg">
-                                                                <div class="carousel-caption">
-                                                                    <h3>The Eurasian eagle-owl</h3>
-                                                                    <p>(Bubo bubo) is a species of eagle-owl resident in much of Eurasia. It is sometimes called the European eagle-owl</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="embed-responsive embed-responsive-16by9">
-                                                                <img class="embed-responsive-item" src="images/nature.jpg">
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="embed-responsive embed-responsive-16by9">
-                                                                <img class="embed-responsive-item" src="images/city.jpg">
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="embed-responsive embed-responsive-16by9">
-                                                                <img class="embed-responsive-item" src="images/space.jpg">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <!-- dropdown grid -->
-                        <li class="dropdown-grid">
-                            <a data-toggle="dropdown" href="javascript:void(0);" class="dropdown-toggle"><i class="fa fa-lock"></i>&nbsp;<span class="hidden-sm hidden-md hidden-lg reverse">Account</span><span class="caret"></span></a>
-                            <div class="dropdown-grid-wrapper" role="menu">
-                                <ul class="dropdown-menu col-xs-12 col-sm-10 col-md-8 col-lg-7">
-                                    <li>
-                                        <div id="carousel-example-account" class="carousel">
-                                            <div class="row">
-                                                <div class="col-lg-8 col-md-8 col-sm-8">
-                                                    <div class="carousel-inner">
-                                                        <div class="item active">
-                                                            <h3 class="text-right" style="padding-top:0px; border-bottom: 1px solid #555;"><i class="fa fa-lock"></i> Sign in</h3>
-                                                            <br>
-                                                            <form class="form-horizontal" role="form">
-                                                                <div class="form-group">
-                                                                    <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
-                                                                    <div class="col-sm-9"><input type="text" class="input-sm form-control" id="inputEmail3" placeholder="Email" autocomplete="off"></div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
-                                                                    <div class="col-sm-9"><input type="password" class="input-sm form-control" id="inputPassword3" placeholder="Password" autocomplete="off"></div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <div class="col-sm-offset-3 col-sm-9">
-                                                                        <button class="btn btn-default pull-right" type="submit"><i class="fa fa-unlock-alt"></i> Sign in</button>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                            <p class="text-primary" style="cursor: pointer;" data-target="#carousel-example-account" data-slide-to="1" ><small>Don’t have a account? Sign up for FREE</small></p>
-                                                            <p class="text-primary" style="cursor: pointer;" data-target="#carousel-example-account" data-slide-to="2" ><small>Lost Your Username?</small></p>
-                                                            <p class="text-primary" style="cursor: pointer;" data-target="#carousel-example-account" data-slide-to="3" ><small>Lost Your Password?</small></p>
-                                                        </div>
-                                                        <div class="item">
-                                                            <h3 class="text-right" style="padding-top:0px; border-bottom: 1px solid #555;"><i class="fa fa-user"></i> Create new account</h3>
-                                                            <br>
-                                                            <form class="form-horizontal" role="form">
-                                                                <div class="form-group">
-                                                                    <label for="inputEmail3" class="col-sm-5 control-label">Email</label>
-                                                                    <div class="col-sm-7"><input type="text" class="input-sm form-control" id="inputEmail3" placeholder="Enter your email address" autocomplete="off"></div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="inputPassword3" class="col-sm-5 control-label">Password</label>
-                                                                    <div class="col-sm-7"><input type="password" class="input-sm form-control" id="inputPassword3" placeholder="Enter password" autocomplete="off"></div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="inputPassword3" class="col-sm-5 control-label">Confirm password</label>
-                                                                    <div class="col-sm-7"><input type="password" class="input-sm form-control" id="inputPassword3" placeholder="Enter confirm password" autocomplete="off"></div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <div class="col-sm-12">
-                                                                        <div class="checkbox">
-                                                                            <label>
-                                                                            <input type="checkbox"> <small>I have read and agree to our<a href="javascript:void(0);">Terms of use</a> and <a href="javascript:void(0);">Privacy Policy</a>.</small>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <div class="col-sm-offset-5 col-sm-7">
-                                                                        <button class="btn btn-default pull-right" type="submit"><i class="fa fa-save"></i> Create an account</button>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                        <!-- Forgot your username -->
-                                                        <div class="item">
-                                                            <h3 class="text-right" style="padding-top:0px; border-bottom: 1px solid #555;"><i class="fa fa-warning"></i> Forgotten your Username?</h3>
-                                                            <br>
-                                                            <p class="text-justify">Enter your email address, you signed up with (or entered in your settings), and we'll send you an email with your username.</p>
-                                                            <br>
-                                                            <form id="lost_password" method="post" class="form" role="form">
-                                                                <div class="input-group">
-                                                                    <input type="text" class="form-control" placeholder="Enter your username" autocomplete="off">
-                                                                    <span class="input-group-btn">
-                                                                    <button class="btn btn-default" type="button"><i class="fa fa-envelope"></i> Send it to me!</button>
-                                                                    </span>
-                                                                </div>
-                                                            </form>
-                                                            <br><br>
-                                                            <p class="text-justify"><small><i>If you've forgotten your username and password, you must first retrieve your username (using your email address) and then reset your password using those details.</i></small></p>
-                                                        </div>
-                                                        <!-- Forgot your password -->
-                                                        <div class="item">
-                                                            <h3 class="text-right" style="padding-top:0px; border-bottom: 1px solid #555;"><i class="fa fa-warning"></i> Forgot your password?</h3>
-                                                            <br>
-                                                            <p class="text-justify">Enter your username, and we'll send you an email with a link and instructions to reset your password.
-                                                                If you signed up without an email address (or removed it from settings), visit the FAQ.
-                                                            </p>
-                                                            <br>
-                                                            <form id="lost_password" method="post" class="form" role="form">
-                                                                <div class="input-group">
-                                                                    <input type="text" class="form-control" placeholder="Enter your username" autocomplete="off">
-                                                                    <span class="input-group-btn">
-                                                                    <button class="btn btn-default" type="button"><i class="fa fa-envelope"></i> Send it to me!</button>
-                                                                    </span>
-                                                                </div>
-                                                            </form>
-                                                            <br>
-                                                            <p class="text-justify"><small><i>If you've forgotten your username and password, you must first <span class="text-primary" style="cursor: pointer;" data-target="#carousel-example-account" data-slide-to="2">retrieve your username</span> (using your email address) and then reset your password using those details.</i></small></p>
-                                                        </div>
-                                                        <div class="item">
-                                                            <h3 class="text-right" style="padding-top:0px; border-bottom: 1px solid #555;"><i class="fa fa-envelope"></i> Subscribe to our mailing list</h3>
-                                                            <br>
-                                                            <p class="text-justify" ><i><small>Get the freebies from us and latest updates about YourApp! We hate spam as much as you do, trust us we won't give your details away to other people.</small></i></p>
-                                                            <br>
-                                                            <form class="form-horizontal" role="form">
-                                                                <div class="form-group">
-                                                                    <label for="inputEmail" class="col-sm-5 control-label">Your email address</label>
-                                                                    <div class="col-sm-7"><input type="text" class="input-sm form-control" id="inputEmail" name="inputEmail" placeholder="Your email address"></div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="inputName" class="col-sm-5 control-label">Your Name</label>
-                                                                    <div class="col-sm-7"><input type="text" class="input-sm form-control" id="inputName" name="inputName" placeholder="Your Name"></div>
-                                                                </div>
-                                                                <br>
-                                                                <div class="form-group">
-                                                                    <div class="col-sm-offset-5 col-sm-7">
-                                                                        <button class="btn btn-default pull-right" type="submit"><i class="fa fa-envelope-o"></i> Subscribe</button>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                        <div class="item">
-                                                            <h3 class="text-right" style="padding-top:0px; border-bottom: 1px solid #555;"><i class="fa fa-envelope"></i> Contact us</h3>
-                                                            <br>
-                                                            <div class="row">
-                                                                <form class="" role="form">
-                                                                    <div class="col-xs-6 col-md-6 ">
-                                                                        <div class="form-group">
-                                                                            <input type="text" class="input-sm form-control" id="inputName" name="inputName" placeholder="Enter your name">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xs-6 col-md-6 ">
-                                                                        <div class="form-group">
-                                                                            <input type="password" class="input-sm form-control" id="inputEmail" name="inputEmail" placeholder="Enter your email address">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xs-12 col-md-12 ">
-                                                                        <div class="form-group">
-                                                                            <input type="password" class="input-sm form-control" id="inputSubject" name="inputSubject" placeholder="Subject ...">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xs-12 col-md-12 ">
-                                                                        <div class="form-group">
-                                                                            <textarea style="resize: none;" class="form-control"  id="inputMessage" name="inputMessage" placeholder="Message" rows="3"></textarea>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="form-group col-sm-offset-3 col-sm-9">
-                                                                        <button class="btn btn-default pull-right" type="submit"><i class="fa fa-chevron-circle-right"></i> Submit</button>
-                                                                    </div>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4" style="border-left: 1px solid #555;">
-                                                    <ol class="carousel-indicators navbar-carousel-indicators" style="">
-                                                        <li data-target="#carousel-example-account" data-slide-to="0" class="active"><a href="javascript:void(0);">Sign In<span class="desc reverse">Already have an account? Log in</span></a></li>
-                                                        <li data-target="#carousel-example-account" data-slide-to="1" class=""><a href="javascript:void(0);">Sign Up<span class="desc reverse">Create new account</span></a></li>
-                                                        <li data-target="#carousel-example-account" data-slide-to="2" class=""><a href="javascript:void(0);">Forgot username?<span class="desc reverse">No problem, we can remind you by email</span></a></li>
-                                                        <li data-target="#carousel-example-account" data-slide-to="3" class=""><a href="javascript:void(0);">Forgot password?<span class="desc reverse">Don't worry, it happens!</span></a></li>
-                                                        <li data-target="#carousel-example-account" data-slide-to="4" class=""><a href="javascript:void(0);">Subscribe<span class="desc reverse">Subscribe to our Newsletters</span></a></li>
-                                                        <li data-target="#carousel-example-account" data-slide-to="5" class=""><a href="javascript:void(0);">Contact us<span class="desc reverse">If you have any questions ...</span></a></li>
-                                                    </ol>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li style="padding:0 15px;">
-                            <button type="button" onclick="window.location.href = 'http://codecanyon.net/item/meganavbar-advanced-mega-menu-for-bootstrap-30/8516895?ref=alicantin'" class="btn btn-warning btn-block navbar-btn"><i class="fa fa-shopping-cart"></i>&nbsp;$5</button>
-                        </li>
                     </ul>
                 </div>
             </div>
