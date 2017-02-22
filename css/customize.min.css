@@ -1,0 +1,5 @@
+panel-custom1 > panel-heading {
+    background-image: none;
+    background-color: red;
+    color: white;
+}

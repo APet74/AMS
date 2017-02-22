@@ -1,4 +1,4 @@
-    <div class="container">
+    <div class="container" style="width:100%;">
         <nav class="navbar navbar-inverse no-border-radius xs-height75 navbar-static-top" id="main_navbar" role="navigation">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->

@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="css/megaNav/MegaNavbar.css"/>
     <link rel="stylesheet" type="text/css" href="css/megaNav/skins/navbar-inverse.css" title="inverse">
     <link rel="stylesheet" type="text/css" href="css/megaNav/animation/animation.css" title="inverse">
+    <link rel="stylesheet" type="text/css" href="css/customize.min.css"/>
 
     <link rel="shortcut icon" href="./favicon.ico" />
 
@@ -31,6 +32,16 @@
     <!-- Latest compiled and minified Bootstrap JavaScript CDN version -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <!--or for Bootstrap JavaScript local/server version: <script src="MegaNavbar/assets/plugins/bootstrap/js/bootstrap.min.js"></script>  -->
+    <style>
+        .panel-custom1 {
+            background-image: none;
+            background-color: rgb(218, 83, 83);
+            color: white;
+        }
+        .panel-group .panel-heading+.panel-collapse>.panel-body {
+            border: none;
+        }
+    </style>
 </head>
 <body>
             <?php include_once "Views/nav/index.php" ?>
