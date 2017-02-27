@@ -1,4 +1,4 @@
-    <div class="sidebar" data-color="red" data-image="img/sidebar-4.jpg">
+    <div class="sidebar" data-color="red" data-image="img/sidebar-6.jpg">
 
     <!--
 
@@ -64,7 +64,8 @@
                     </a>
                 </li>
                 <li class="active-pro">
-                    <a href="../login.php">
+                    <!-- Phase 2 <a href="../login.php"> -->
+                    <a href="login.php">
                         <i class="pe-7s-power"></i>
                         <p>Logout</p>
                     </a>

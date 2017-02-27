@@ -1,6 +1,9 @@
 <?php
+session_start();
+/* For phase 2
 require_once '../resources/ticketGroup.php';
 require_once '../resources/dbConn.php'; 
+*/
 ?>
 
 <!doctype html>
@@ -9,7 +12,7 @@ require_once '../resources/dbConn.php';
     <?php 
     $page = "Dashboard";
     ?>
-    <meta charset="utf-8" />
+        <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
