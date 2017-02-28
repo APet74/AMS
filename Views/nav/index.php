@@ -22,15 +22,21 @@
                     echo "<li>";
                 }
                 ?>
-                    <a href="dashboard.php">
-                        <i class="pe-7s-graph"></i>
+                    <a href="index.php">
+                        <i class="pe-7s-home"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li>
-                    <a href="user.php">
-                        <i class="pe-7s-user"></i>
-                        <p>User Profile</p>
+                 <?php 
+                if($page == "Report"){
+                    echo "<li class='active'>";
+                }else{
+                    echo "<li>";
+                }
+                ?>
+                    <a href="report.php">
+                        <i class="pe-7s-note2"></i>
+                        <p>Reports</p>
                     </a>
                 </li>
                 <li>
