@@ -28,6 +28,30 @@
                     </a>
                 </li>
                  <?php 
+                if($page == "update"){
+                    echo "<li class='active'>";
+                }else{
+                    echo "<li>";
+                }
+                ?>
+                    <a href="updateAssets.php">
+                        <i class="pe-7s-refresh-2"></i>
+                        <p>Update Assets</p>
+                    </a>
+                </li>
+                 <?php 
+                if($page == "list"){
+                    echo "<li class='active'>";
+                }else{
+                    echo "<li>";
+                }
+                ?>
+                    <a href="listAssets.php">
+                        <i class="pe-7s-network"></i>
+                        <p>List/Search Assets</p>
+                    </a>
+                </li>
+                <?php 
                 if($page == "Report"){
                     echo "<li class='active'>";
                 }else{
@@ -37,36 +61,6 @@
                     <a href="report.php">
                         <i class="pe-7s-note2"></i>
                         <p>Reports</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="table.php">
-                        <i class="pe-7s-note2"></i>
-                        <p>Table List</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="typography.php">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Typography</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="icons.php">
-                        <i class="pe-7s-science"></i>
-                        <p>Icons</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="maps.php">
-                        <i class="pe-7s-map-marker"></i>
-                        <p>Maps</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="notifications.php">
-                        <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
                     </a>
                 </li>
                 <li class="active-pro">
