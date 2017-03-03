@@ -27,6 +27,18 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
+                <?php 
+                if($page == "add"){
+                    echo "<li class='active'>";
+                }else{
+                    echo "<li>";
+                }
+                ?>
+                    <a href="addAssets.php">
+                        <i class="pe-7s-plus"></i>
+                        <p>Add Asset</p>
+                    </a>
+                </li>
                  <?php 
                 if($page == "update"){
                     echo "<li class='active'>";
