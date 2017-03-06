@@ -80,7 +80,7 @@
                                 <div class="col-md-12">
                                     <div class="content">
                                         <form id="addForm" method="POST" action="Control/addAssets/add.php">
-                                        <table>
+                                        <table style="border-collapse: separate;border-spacing: 0 1em;">
                                             <tr>
                                                 <td><label>Item Type &nbsp;</label></td><td><select name="assetType" id="assetType">
                                                     <option></option>
@@ -126,7 +126,13 @@
                                                 <td><label>Manufacturer &nbsp;</label></td><td><input type="text" name="manufacturer" id="manufacturer" clas="manufacturer"</td>
                                             </tr>
                                             <tr>
-                                                <td><label>Warranty Experiation &nbsp;</label></td><td><input type="text" name="warrantyExperiation" id="warrantyExperiation" clas="warrantyExperiation"</td>
+                                                <td><label>Warranty Experiation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td><td><input type="text" name="warrantyExperiation" id="warrantyExperiation" clas="warrantyExperiation"</td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Description</label></td><td><textarea rows="5" cols="25" name="description"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"><center><input type="submit" class="btn submitBtn" id="submitBtn" value="Add Asset"></center></td>
                                             </tr>
                                         </table>
         

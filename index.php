@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once("resources/userNormal.php");
 /* For phase 2
 require_once '../resources/ticketGroup.php';
 require_once '../resources/dbConn.php'; 

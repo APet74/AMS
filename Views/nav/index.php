@@ -28,29 +28,35 @@
                     </a>
                 </li>
                 <?php 
-                if($page == "add"){
-                    echo "<li class='active'>";
-                }else{
-                    echo "<li>";
+                if ($_SESSION['status'] == 2){
+                    if($page == "add"){
+                        echo "<li class='active'>";
+                    }else{
+                        echo "<li>";
+                    }
+                    
+                        echo "<a href='addAssets.php'>";
+                           echo "<i class='pe-7s-plus'></i>";
+                            echo "<p>Add Asset</p>";
+                        echo "</a>";
+                    echo "</li>";
                 }
                 ?>
-                    <a href="addAssets.php">
-                        <i class="pe-7s-plus"></i>
-                        <p>Add Asset</p>
-                    </a>
-                </li>
-                 <?php 
-                if($page == "update"){
-                    echo "<li class='active'>";
-                }else{
-                    echo "<li>";
+                <?php 
+                if ($_SESSION['status'] == 2){
+                    if($page == "update"){
+                        echo "<li class='active'>";
+                    }else{
+                        echo "<li>";
+                    }
+                    
+                        echo "<a href='updateAssets.php'>";
+                           echo "<i class='pe-7s-refresh-2'></i>";
+                            echo "<p>Update Asset</p>";
+                        echo "</a>";
+                    echo "</li>";
                 }
                 ?>
-                    <a href="updateAssets.php">
-                        <i class="pe-7s-refresh-2"></i>
-                        <p>Update Assets</p>
-                    </a>
-                </li>
                  <?php 
                 if($page == "list"){
                     echo "<li class='active'>";
@@ -63,18 +69,21 @@
                         <p>List/Search Assets</p>
                     </a>
                 </li>
-                <?php 
-                if($page == "Report"){
-                    echo "<li class='active'>";
-                }else{
-                    echo "<li>";
+               <?php 
+                if ($_SESSION['status'] == 2){
+                    if($page == "report"){
+                        echo "<li class='active'>";
+                    }else{
+                        echo "<li>";
+                    }
+                    
+                        echo "<a href='report.php'>";
+                           echo "<i class='pe-7s-note2'></i>";
+                            echo "<p>Reports</p>";
+                        echo "</a>";
+                    echo "</li>";
                 }
                 ?>
-                    <a href="report.php">
-                        <i class="pe-7s-note2"></i>
-                        <p>Reports</p>
-                    </a>
-                </li>
                 <li class="active-pro">
                     <!-- Phase 2 <a href="../login.php"> -->
                     <a href="login.php">

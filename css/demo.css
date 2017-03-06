@@ -59,3 +59,6 @@
 .table-upgrade td:nth-child(3){
     text-align: center;
 }
+tr > td{
+    padding-bottom: 2em;
+}
