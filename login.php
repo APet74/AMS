@@ -59,6 +59,16 @@
       $("form").submit();
     }
   });
+  $('.error-page').hide(0);
+
+  $('.login-button').click(function(){
+    document.getElementById("formLogin").submit();
+  });
+
+  $('.try-again').click(function(){
+    $('.error-page').hide(0);
+    $('.login').slideDown(1000);
+  });
 </Script>
   </body>
 </html>
