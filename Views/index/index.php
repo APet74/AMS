@@ -22,9 +22,9 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <?php 
-                        if($_SESSION['admin'] == 1){
+                        if($_SESSION['status'] == 2){
                         echo "<li>";
-                        echo   "<a href=''>";
+                        echo   "<a href='admin.php'>";
                         echo       "<p>Admin</p>";
                         echo    "</a>";
                         echo "</li>";
