@@ -62,3 +62,6 @@
 tr > td{
     padding-bottom: 2em;
 }
+.under-table{
+    display: none;
+}

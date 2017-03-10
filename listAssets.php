@@ -57,6 +57,7 @@ $page = "list";
         <!--   Core JS Files   -->
     <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/listTable.js" type="text/javascript"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<script src="js/bootstrap-checkbox-radio-switch.js"></script>

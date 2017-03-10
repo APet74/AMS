@@ -73,6 +73,11 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
+                                <?php
+                                    if(isset($_GET['Msg'])){
+                                        echo "<center><h2 style='color:rgb(58, 186, 58);'><B>Asset added!</b></h2></center>";
+                                    }
+                                ?>
                                 <h4 class="title">Add Asset</h4>
                                 <p class="category">Add various types of assets here.</p>
                             </div>
