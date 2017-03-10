@@ -108,7 +108,7 @@
                                                 <td class="hideComputer" style="display:none;"><label class="hideComputer" style="display:none;">Computer Name &nbsp;</label></td><td><input type="text" name="computerName" id="computerName" class="computerName hideComputer" style="display:none;"></td>
                                             </tr>
                                             <tr class="hideComputer" style="display:none;">
-                                                <td class="hideComputer" style="display:none;"><label class="hideComputer" style="display:none;">Operating System &nbsp;</label></td><td><input type="textoperatingSystem" id="operatingSystem" class="operatingSystem hideComputer" style="display:none;"></td>
+                                                <td class="hideComputer" style="display:none;"><label class="hideComputer" style="display:none;">Operating System &nbsp;</label></td><td><input type="text" name="operatingSystem" id="operatingSystem" class="operatingSystem hideComputer" style="display:none;"></td>
                                             </tr>
                                             <tr>
                                                 <td><label>Location &nbsp;</label></td><td><input type="text" name="location" id="location" clas="location"</td>

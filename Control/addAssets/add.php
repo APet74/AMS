@@ -1,9 +1,10 @@
 <?php 
+session_start();
 	require_once("../../config.php");
 	$insertQuery = "INSERT INTO items (location, warrantyExp, manufacturer, price, description, createdBy, retiredStatus, type, serialNum, currentUser) VALUES (:location, :warrantyExp, :manufacturer, :price, :description, :createdBy, :retiredStatus, :type, :serialNum, :currentUser)";
 	$stmt = $dbh->prepare($insertQuery);
 	$stmt->BindValue(":location", $_POST['location']);
-	$stmt->BindValue("LwarrantyExp", $_POST['warrantyExperation']);
+	$stmt->BindValue("warrantyExp", $_POST['warrantyExperiation']);
 	$stmt->BindValue(":manufacturer", $_POST['manufacturer']);
 	$stmt->BindValue(":price", $_POST['price']);
 	$stmt->BindValue(":description", $_POST['description']);
@@ -13,8 +14,11 @@
 	$stmt->BindValue(":serialNum", $_POST['serialNumber']);
 	$stmt->BindValue(":currentUser", $_POST['currentUser']);
 	$stmt->Execute();
+	$lastID = $dbh->lastInsertID();
+	echo $lastInsertID
 
-	if(isset($_POST['computerName'])){
+	if($_POST['computerName'] != ""){
+		echo "came here";
 		$insertComputer = "INSERT INTO computers (computerName, operatingSys) VALUES (:computerName, :operatingSys)";
 		$stmt = $dbh->prepare($insertComputer);
 		$stmt->BindValue(":computerName", $_POST['computerName']);
