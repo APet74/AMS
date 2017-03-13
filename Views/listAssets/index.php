@@ -73,8 +73,8 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Striped Table with Hover</h4>
-                                <p class="category">Here is a subtitle for this table</p>
+                                <h4 class="title">List Assets</h4>
+                                <p class="category">View and search all assets currently in system</p>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <?php

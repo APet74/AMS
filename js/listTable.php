@@ -1,3 +1,5 @@
+
+<script type="text/javascript">
 function format(d){
         return '<div class="row">'+
         '<div class="col col-md-2"><b>Retired Status:</b> &nbsp;'+d.retiredStatus+'</div>'+
@@ -7,10 +9,10 @@ function format(d){
          '<div class="col col-md-1"><b>Price:</b> &nbsp;$'+d.price+'</div>'+
          '<div class="col col-md-2"><b>Serial Number:</b> &nbsp;'+d.serialNum+'</div>'+
          '<div class="col col-md-3"><b>Description:</b> &nbsp;'+d.description+'</div>'+
-         '</div>'+
-         '<div class="row">'+
-         '<div class="col col-md-12"><input type="hidden" name="itemID" id="itemID" value="'+d.itemID+'"><button class="btn btn-info">Edit Asset</button></div>'+
          '</div>';
+}
+function formatID(d){
+    return d.itemID;
 }
 $().ready(function(){
     var table = $('#assetTable').DataTable({
@@ -20,7 +22,13 @@ $().ready(function(){
                 "className":      'details-control',
                 "orderable":      false,
                 "data":           null,
-                "defaultContent": ''
+                <?php 
+                if($_SESSION['status'] == 1){
+                   echo "\"defaultContent\": ''";
+                }else{
+                    echo "\"defaultContent\": '<input type=\"hidden\" name=\"id\" value=\"{\"data\": \"itemID\"}\">'";
+                }
+                ?>
             },
             { "data": "type"},
             { "data": "computerName"},
@@ -45,3 +53,5 @@ $().ready(function(){
         }
     } );
 });
+
+</script>

@@ -1,5 +1,6 @@
 <?php
 class asset {
+	public $itemID;
 	public $location;
 	public $warrantyExp;
 	public $manufacturer;
@@ -15,6 +16,7 @@ class asset {
 
 	/**
 	 * Class Constructor
+	 * @param    $itemID
 	 * @param 	 $location
 	 * @param    $warrantyExp
 	 * @param    $manufacturer  
@@ -30,7 +32,7 @@ class asset {
 	 */
 	 public function __construct($item, $pcObj) {
 
-	    
+	    $this->itemID = $item['itemID'];
 	    $this->location = $item['location'];
 	    $this->warrantyExp = $item['warrantyExp'];
 	    $this->manufacturer = $item['manufacturer'];

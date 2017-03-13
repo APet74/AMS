@@ -116,25 +116,28 @@
                                                 <td class="hideComputer" style="display:none;"><label class="hideComputer" style="display:none;">Operating System &nbsp;</label></td><td><input type="text" name="operatingSystem" id="operatingSystem" class="operatingSystem hideComputer" style="display:none;"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Location &nbsp;</label></td><td><input type="text" name="location" id="location" clas="location"</td>
+                                                <td><label>Location &nbsp;</label></td><td><input type="text" name="location" id="location" clas="location"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Current User &nbsp;</label></td><td><input type="text" name="currentUser" id="currentUser" clas="currentUser"</td>
+                                                <td><label>Current User &nbsp;</label></td><td><input type="text" name="currentUser" id="currentUser" clas="currentUser"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Price &nbsp;</label></td><td><input type="text" name="price" id="price" clas="price"</td>
+                                                <td><label>Price &nbsp;</label></td><td><input type="text" name="price" id="price" clas="price"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Serial Number &nbsp;</label></td><td><input type="text" name="serialNumber" id="serialNumber" clas="serialNumber"</td>
+                                                <td><label>Serial Number &nbsp;</label></td><td><input type="text" name="serialNumber" id="serialNumber" clas="serialNumber"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Manufacturer &nbsp;</label></td><td><input type="text" name="manufacturer" id="manufacturer" clas="manufacturer"</td>
+                                                <td><label>Manufacturer &nbsp;</label></td><td><input type="text" name="manufacturer" id="manufacturer" class="manufacturer"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Warranty Experiation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td><td><input type="text" name="warrantyExperiation" id="warrantyExperiation" clas="warrantyExperiation"</td>
+                                                <td><label>Warranty Experiation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td><td><input type="text" name="warrantyExperiation" id="warrantyExperiation" clas="warrantyExperiation"></td>
                                             </tr>
                                             <tr>
                                                 <td><label>Description</label></td><td><textarea rows="5" cols="25" name="description"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Quantity</label></td><td><input type="text" name="quantity" class="quanity" id="quantity"></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="2"><center><input type="submit" class="btn submitBtn" id="submitBtn" value="Add Asset"></center></td>
