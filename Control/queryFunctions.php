@@ -33,6 +33,7 @@ function generateAjax($objects){
 	foreach($objects as $item){
 		$i++;
 		fwrite($fileM, "\t\t{\n");
+		fwrite($fileM, "\t\t\t\"accountLevel\": \"{$_SESSION['status']}\",\n");
 		fwrite($fileM, "\t\t\t\"itemID\": \"{$item->get("itemID")}\",\n");
 		fwrite($fileM, "\t\t\t\"location\": \"{$item->get("location")}\",\n");
 		fwrite($fileM, "\t\t\t\"warrantyExp\": \"{$item->get("warrantyExp")}\",\n");
