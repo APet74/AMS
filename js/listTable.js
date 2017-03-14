@@ -1,27 +1,29 @@
 function format(d){
         if(d.accountLevel == "2"){
             return '<div class="row">'+
-            '<div class="col col-md-2"><b>Retired Status:</b> &nbsp;'+d.retiredStatus+'</div>'+
-            
-             '<div class="col col-md-2"><b>Warranty Experation:</b> &nbsp;'+d.warrantyExp+'</div>'+
-             '<div class="col col-md-2"><b>Manufacturer:</b> &nbsp;'+d.manufacturer+'</div>'+
-             '<div class="col col-md-1"><b>Price:</b> &nbsp;$'+d.price+'</div>'+
-             '<div class="col col-md-2"><b>Serial Number:</b> &nbsp;'+d.serialNum+'</div>'+
-             '<div class="col col-md-3"><b>Description:</b> &nbsp;'+d.description+'</div>'+
-             '</div>'+
-             '<div class="row">'+
-             '<div class="col col-md-12"><input type="hidden" name="itemID" id="itemID" value="'+d.itemID+'"><button class="btn btn-info" id="editAsset">Edit Asset</button></div>'+
-             '</div>';
+            '<div class="col col-md-6">'+
+            '<table>'+
+            '<tr><td><b>Retired Status:</b> &nbsp;</td><td>'+d.retiredStatus+'</td></tr>'+
+            '<tr><td><b>Warranty Experation:</b> &nbsp;</td><td>'+d.warrantyExp+'</td></tr>'+
+            '<tr><td><b>Manufacturer:</b> &nbsp;</td><td>'+d.manufacturer+'</td></tr>'+
+            '<tr><td><b>Price:</b> &nbsp;<td>$'+d.price+'</div>'+
+            '</table></div><div class="col-md-6"><table>'+
+            '<tr><td><b>Serial Number:</b> &nbsp;</td><td>'+d.serialNum+'</td></tr>'+
+            '<tr><td><b>Description:</b> &nbsp;</td><td>'+d.description+'</td></tr>'+
+            '<tr><td colspan="2"><input type="hidden" name="itemID" id="itemID" value="'+d.itemID+'"><button class="btn btn-info" id="editAsset">Edit Asset</button></td></tr>'+
+            '</table></div>';
         }else{
             return '<div class="row">'+
-            '<div class="col col-md-2"><b>Retired Status:</b> &nbsp;'+d.retiredStatus+'</div>'+
-            
-             '<div class="col col-md-2"><b>Warranty Experation:</b> &nbsp;'+d.warrantyExp+'</div>'+
-             '<div class="col col-md-2"><b>Manufacturer:</b> &nbsp;'+d.manufacturer+'</div>'+
-             '<div class="col col-md-1"><b>Price:</b> &nbsp;$'+d.price+'</div>'+
-             '<div class="col col-md-2"><b>Serial Number:</b> &nbsp;'+d.serialNum+'</div>'+
-             '<div class="col col-md-3"><b>Description:</b> &nbsp;'+d.description+'</div>'+
-             '</div>';
+            '<div class="col col-md-6">'+
+            '<table>'+
+            '<tr><td><b>Retired Status:</b> &nbsp;</td><td>'+d.retiredStatus+'</td></tr>'+
+            '<tr><td><b>Warranty Experation:</b> &nbsp;</td><td>'+d.warrantyExp+'</td></tr>'+
+            '<tr><td><b>Manufacturer:</b> &nbsp;</td><td>'+d.manufacturer+'</td></tr>'+
+            '</table></div><div class="col-md-6"><table>'+
+            '<tr><td><b>Price:</b> &nbsp;<td>$'+d.price+'</div>'+
+            '<tr><td><b>Serial Number:</b> &nbsp;</td><td>'+d.serialNum+'</td></tr>'+
+            '<tr><td><b>Description:</b> &nbsp;</td><td>'+d.description+'</td></tr>'+
+            '</table></div>';
         }
 }
 $().ready(function(){
@@ -67,12 +69,10 @@ function modalConent(aID){
                $('.modal-body').html(d);
                $('.modal-title').html("Asset ID: " + aID);
                $('#myModal').modal('show');
-               var time = $('#time').val();
-               var desc = $('#description').val(); 
        }); 
     };
 
     $(document).on('click', '#editAsset', function(){
-        var aID = $(this).closest('input').find('#itemID').val();
+        var aID = $(this).closest('div.row').find("input[name='itemID']").val();
         modalConent(aID);
     });

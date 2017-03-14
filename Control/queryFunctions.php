@@ -24,6 +24,27 @@ function arrayItemObjects($dbh){
 	    return $array;
 }
 
+function getSingleObject($aID ,$dbh){
+	$result = $stmt = "SELECT * FROM items WHERE itemID = :itemID";
+	$query = $dbh->prepare($stmt);
+	$query->bindValue(":itemID", $aID);
+	    $query->execute();
+	    $item = $query->fetch(PDO::FETCH_ASSOC);
+	    	if($item['computerID'] != 0){
+	    		$query = "SELECT * FROM computers WHERE computerID = :computerID";
+	    		$stmt = $dbh->prepare($query);
+	    		$stmt->BindValue(":computerID", $item['computerID']);
+	    		$stmt->execute();
+	    		$id = $stmt->fetch(PDO::FETCH_ASSOC);
+	    		$pcObj = new computer($id);
+	    	}else{
+	    		$pcObj = NULL;
+	    	}
+	    	$asset = new asset($item, $pcObj);
+	   
+	    return $asset;
+}
+
 function generateAjax($objects){
 	$result = count($objects);
 	$fileM = fopen("txt/ajaxList.txt", "w");

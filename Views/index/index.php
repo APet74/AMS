@@ -12,7 +12,7 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
-                        <li>v
+                        <li>
                             <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-dashboard"></i>
                                 <p class="hidden-lg hidden-md">Dashboard</p>

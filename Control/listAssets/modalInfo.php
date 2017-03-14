@@ -1,72 +1,47 @@
 <?php
-session_start();
-if(!isset($_SESSION['user']) || (trim($_SESSION['user']) == '')) {
-  header("location: login.php");
-}
-if($_SESSION['ticketAdmin'] != 1){
-    header("location:index.php");
-}
 
+require_once("../../config.php");
+$item = getSingleObject($_POST['aID'], $dbh);
 
-	echo "<br>";
-    echo "<table style='width:100%; ' class = 'table table-striped table-bordered table-hover'>";
-    echo "<tr>";
-    echo" <th>Requestor</th>";
-    echo "<th>Description</th>";
-    echo "<th>Type</th>";
-    echo "<th>Status</th>";
-    echo "<th>Severity</th>";
-    echo "<th>Request Date</th>";
-    echo "<th>Ticket #</th>";
-    echo "<th>Assigned To</th>";
+?>
 
-    echo "</tr>";
-    echo "<tbody id='myTable' class='myTable'>";
-    foreach($info as $item){
-    	echo "<tr>";
-    	$date = $item['ticketDate'];
-    	$newDate = date('Y-m-d h:i:s a', strtotime($date));
-    	echo "<td>{$item['ticketContact']}</td><td>{$item['ticketDescription']}</td><td>{$item['ticketType']}</td><td id='resolvedTicket'>{$item['ticketsResolved']}</td><td>{$item['ticketStatus']}</td><td>{$newDate}</td><td class='tidTD'><input type='hidden' class='tidTD' value='{$item['ticketID']}'/>{$item['ticketID']}</td><td>{$item['ticketsClaimedBy']}</td>";
-    	echo "</tr>";
-    }
-    echo "</tbody>";
-    echo "</table>";
-    $selectQueryC = "SELECT * FROM ticketComments WHERE ticketID = :ticketID";
-	$stmt = $dbh->prepare($selectQueryC);
-	$stmt->bindValue(":ticketID", $_POST['tid']);
-	$stmt->execute();
-	$info = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	echo "<br>";
-	echo "<form id='commentAdd' method='POST' action='javascript:void(0);'>";
-    echo "<center><table style='width:75%;' class = 'table table-striped table-bordered table-hover'>";
-    echo "<tr>";
-    echo" <th>Name</th>";
-    echo "<th>Description</th>";
-    echo "<th>Time</th>";
-    echo "<th>Date</th>";
-    echo "</tr>";
-    echo "<tbody id='myTable' class='myTable'>";
-    foreach($info as $item){
-    	echo "<tr>";
-    	$date = $item['ticketCommentDate'];
-    	$newDate = date('Y-m-d h:i:s a', strtotime($date));
-    	echo "<td>{$item['ticketCommentUser']}</td><td>{$item['ticketCommentDescription']}</td><td>{$item['ticketCommentTime']}</td><td>{$newDate}</td>";
-    	echo "</tr>";
-    }
-    echo "<tr>";
-    echo "<td>{$_SESSION['givenname']}</td><td><textarea name='Description' id='description' rows='2' cols='50'></textarea></td><td><input type='text' id='time' name='time'/><input type='hidden' name='id' id='ticketID' value='{$_POST['tid']}'></td><td><input type='submit' class='btn btn-info' id='addComment'></td>";
-    echo "</tbody>";
-    echo "</table></center></form>";
-    echo "<input type='hidden' value='{$_POST['tid']}' id='resolverInput' name='resolveInput'>";
-    echo "<center><button class='btn btn-success resolvedBTN' value='{$_POST['tid']}' id='Resolved' style='width:500px'>Resolve</button>&nbsp;<select name='clamStaff' style='width:250px;' id='claimStaff'><option value='{$_SESSION['givenname']}'>{$_SESSION['givenname']}</option>";
-    $selectFromCS = "SELECT * FROM claimStaff WHERE selected = '1'";
-    $queryRun = $dbh->prepare($selectFromCS);
-    $queryRun->execute();
-    $allCS = $queryRun->fetchAll(PDO::FETCH_ASSOC);
-    foreach($allCS as $csStaff){
-       if($csStaff['staffName'] != $_SESSION['givenname']){
-        echo "<option value='{$csStaff['staffName']}' id='claimStaffDrop'>{$csStaff['staffName']}</option>";
-       }
-    }
-    echo "</select><button class='btn btn-primary claimBTN' value='Assign Staff' id='claimStaffBTN' style='width:250px;'>Assign Staff</button></center>";
-    ?>
+<div class="row">
+<form method="POST" action="Control/listAssets/update.php" id='updateForm'>
+    <div class="col col-md-6">
+        <input type="hidden" name="itemID" value="<?php echo $_POST['aID']; ?>">
+        <table>
+            <tr><td><label>Item Type:</label></td><td><input type="text" name="itemType" <?php echo "value='{$item->get('type')}'"; ?> disabled></td></tr>
+            <tr><td><label>Location:</label></td><td><input type="text" name="location" <?php echo "value='{$item->get('location')}'"; ?>></td></tr>
+            <tr><td><label>Current User:</label></td><td><input type="text" name="currentUser" <?php echo "value='{$item->get('currentUser')}'"; ?>></td></tr>
+            <tr><td><label>Price:</label></td><td><input type="text" name="price" <?php echo "value='{$item->get('price')}'"; ?>></td></tr>
+            <tr><td><label>Manufacturer:</label></td><td><input type="text" name="manufacturer" <?php echo "value='{$item->get('manufacturer')}'"; ?>></td></tr>
+            <tr><td><label>Serial Number:&nbsp;&nbsp;</label></td><td><input type="text" name="serialNum" <?php echo "value='{$item->get('serialNum')}'"; ?>></td></tr>
+        </table>
+    </div>
+    <div class="col col-md-6">
+        <table>
+        <tr><td><label>Warranty Experation:&nbsp;&nbsp;</label></td><td><input type="text" name="warrantyExp" <?php echo "value='{$item->get('warrantyExp')}'"; ?>></td></tr>
+        <tr><td><label>Retired Status:</label></td><td>
+            <select name="reitredStatus">
+                <?php 
+                    if($item->get("reitredStatus") == 1){
+                        echo "<option value='yes'>Yes</option><option value='no'>No</option>";
+                    }else{
+                        echo "<option value='no'>No</option><option value='yes'>Yes</option>";
+                    }
+                    ?>
+            </select>
+        </td></tr>
+        <?php
+            if($item->get("computer") != NULL){
+                echo "<input type='hidden' name='computerID' value='{$item->get('computer')->get('computerID')}' >";
+                echo "<tr><td><label>Computer Name:</lable></td><td><input type='text' name='computerName' value='{$item->get('computer')->get('computerName')}'></td></tr>";
+                echo "<tr><td><label>operating System:</label></td><td><input type='text' name='operatingSys' value='{$item->get('computer')->get('operatingSys')}'></td></tr>";
+            }
+        ?>
+        <tr><td><label>Description:</label></td><td><textarea name='description'><?php echo $item->get("description"); ?></textarea></td></tr>
+        <tr><td colspan="2"><input type="submit" name="submit" value="Update" class="btn btn-success"></td></tr>
+        </table>
+    </div>
+</form>
+</div>

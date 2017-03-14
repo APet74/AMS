@@ -42,21 +42,6 @@
                     echo "</li>";
                 }
                 ?>
-                <?php 
-                if ($_SESSION['status'] == 2){
-                    if($page == "update"){
-                        echo "<li class='active'>";
-                    }else{
-                        echo "<li>";
-                    }
-                    
-                        echo "<a href='updateAssets.php'>";
-                           echo "<i class='pe-7s-refresh-2'></i>";
-                            echo "<p>Update Asset</p>";
-                        echo "</a>";
-                    echo "</li>";
-                }
-                ?>
                  <?php 
                 if($page == "list"){
                     echo "<li class='active'>";
@@ -66,7 +51,13 @@
                 ?>
                     <a href="listAssets.php">
                         <i class="pe-7s-network"></i>
-                        <p>List/Search Assets</p>
+                        <?php
+                            if($_SESSION['status'] == 1){
+                                echo "<p>List/Search Assets</p>";
+                            }else{
+                                echo "<p>Search/Update Assets</p>";
+                            }
+                        ?>
                     </a>
                 </li>
                <?php 

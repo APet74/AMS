@@ -131,7 +131,7 @@
                                                 <td><label>Manufacturer &nbsp;</label></td><td><input type="text" name="manufacturer" id="manufacturer" class="manufacturer"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Warranty Experiation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td><td><input type="text" name="warrantyExperiation" id="warrantyExperiation" clas="warrantyExperiation"></td>
+                                                <td><label>Warranty Experiation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td><td><input type="date" name="warrantyExperiation" id="warrantyExperiation" clas="warrantyExperiation"></td>
                                             </tr>
                                             <tr>
                                                 <td><label>Description</label></td><td><textarea rows="5" cols="25" name="description"></textarea></td>
