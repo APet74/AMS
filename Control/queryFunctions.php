@@ -24,6 +24,29 @@ function arrayItemObjects($dbh){
 	    return $array;
 }
 
+function getLast10($dbh){
+	$array = array();
+	$getLast10 = "SELECT * FROM items ORDER BY dateEntered DESC LIMIT 10";
+	$stmt = $dbh->prepare($getLast10);
+	$stmt->execute();
+	$items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	foreach ($items as $item){
+		if($item['computerID'] != 0){
+	    		$query = "SELECT * FROM computers WHERE computerID = :computerID";
+	    		$stmt = $dbh->prepare($query);
+	    		$stmt->BindValue(":computerID", $item['computerID']);
+	    		$stmt->execute();
+	    		$id = $stmt->fetch(PDO::FETCH_ASSOC);
+	    		$pcObj = new computer($id);
+	    	}else{
+	    		$pcObj = NULL;
+	    	}
+	    	$asset = new asset($item, $pcObj);
+	    	array_push($array, $asset);
+	    }
+	    return $array;
+}
+
 function getSingleObject($aID ,$dbh){
 	$result = $stmt = "SELECT * FROM items WHERE itemID = :itemID";
 	$query = $dbh->prepare($stmt);

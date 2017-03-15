@@ -8,7 +8,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="listAssets.php">List Assets</a>
+                    <a class="navbar-brand" href="addAccounts.php">Create Accounts</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -73,19 +73,46 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">List Assets</h4>
-                                <p class="category">View and search all assets currently in system</p>
-                            </div>
-                            <div class="content table-responsive table-full-width">
                                 <?php
                                     if(isset($_GET['Msg'])){
-                                        echo "<center><h2 style='color:rgb(58, 186, 58);'><B>Asset Updated!</b></h2></center>";
+                                        echo "<center><h2 style='color:rgb(58, 186, 58);'><B>Account added!</b></h2></center>";
                                     }
-                                    require_once("Control/listAssets/listTable.php");
                                 ?>
-
+                                <h4 class="title">Create Account</h4>
+                                <p class="category">Create users of different types here.</p>
                             </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="content">
+                                        <form id="addForm" method="POST" action="Control/addAccounts/newAcc.php">
+                                        <table style="border-collapse: separate;border-spacing: 0 1em;">
+                                            <tr>
+                                                <td><label>Account Type</label></td><td><select name="accountLevel" id="accountLevel">
+                                                    <option></option>
+                                                    <option value=1> General</option>
+                                                    <option value=2> Admin</option>
+                                                </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Email &nbsp;</label></td><td><input type="text" name="email" id="email"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Username &nbsp;</label></td><td><input type="text" name="username" id="username"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Password &nbsp;</label></td><td><input type="text" name="password" id="password"></td>
+                                            </tr>
+                                        </table>
+                                            <input type="submit" name="submit" value="Add User" class="btn btn-danger">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                                
                         </div>
                     </div>
                 </div>
             </div>
+
+
+

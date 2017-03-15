@@ -24,7 +24,7 @@
                         <?php 
                         if($_SESSION['status'] == 2){
                         echo "<li>";
-                        echo   "<a href='admin.php'>";
+                        echo   "<a href='addAccounts.php'>";
                         echo       "<p>Admin</p>";
                         echo    "</a>";
                         echo "</li>";
@@ -57,7 +57,7 @@
                               </ul>
                         </li>
                         <li>
-                            <a href="../login.php">
+                            <a href="login.php">
                                 <p>Log out</p>
                             </a>
                         </li>
@@ -122,14 +122,16 @@
 
 
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="card ">
                             <div class="header">
                                 <h4 class="title">Last Added</h4>
-                                <p class="category">Lsat assets added.</p>
+                                <p class="category">Last assets added.</p>
                             </div>
                             <div class="content">
-                                <!-- TODO add 10 last added assets here -->
+                                <?php 
+                                    require_once("Control/index/lastAdded.php");
+                                ?>
 
                                 <div class="footer">
                                     <hr>
@@ -140,7 +142,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <!--
                     <div class="col-md-6">
                         <div class="card ">
                             <div class="header">
@@ -181,6 +183,8 @@
                             </div>
                         </div>
                     </div>
+
+                    -->
                 </div>
             </div>
         </div>
