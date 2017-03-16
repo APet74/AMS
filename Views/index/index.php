@@ -78,14 +78,8 @@
                                 <p class="category">Current breakdown of active vs non-active assets</p>
                             </div>
                             <div class="content">
-                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
-
+                                <?php require_once("Control/index/donutChart.php"); ?>
                                 <div class="footer">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Active
-                                        <i class="fa fa-circle text-danger"></i> Retired
-                                        <i class="fa fa-circle text-warning"></i> Unknown
-                                    </div>
                                     <hr>
                                     <div class="stats">
                                         <i class="fa fa-history"></i> Updated on load
@@ -98,18 +92,13 @@
                     <div class="col-md-8">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Assets by Date</h4>
-                                <p class="category">amount of each type of asset added by date.</p>
+                                <h4 class="title">Assets Breakdown</h4>
+                                <p class="category">amount of each type of asset </p>
                             </div>
                             <div class="content">
-                                <div id="chartHours" class="ct-chart"></div>
+                                <?php require_once("Control/index/donutChart2.php"); ?>
                                 <div class="footer">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Computer
-                                        <i class="fa fa-circle text-danger"></i> Furniture
-                                        <i class="fa fa-circle text-warning"></i> Other
-                                    </div>
-                                    <hr>
+                                <hr>
                                     <div class="stats">
                                         <i class="fa fa-history"></i> Updated on load
                                     </div>
@@ -142,49 +131,6 @@
                             </div>
                         </div>
                     </div>
-                    <!--
-                    <div class="col-md-6">
-                        <div class="card ">
-                            <div class="header">
-                                <h4 class="title">Tasks</h4>
-                                <p class="category">Items to Inventory</p>
-                            </div>
-                            <div class="content">
-                                <div class="table-full-width">
-                                    <table class="table">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" value="" data-toggle="checkbox">
-                                                    </label>
-                                                </td>
-                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                        <i class="fa fa-edit"></i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="fa fa-times"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                          
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <div class="footer">
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-history"></i> Updated 3 minutes ago
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    -->
                 </div>
             </div>
         </div>

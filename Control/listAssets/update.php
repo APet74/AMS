@@ -10,9 +10,9 @@ require_once("../../config.php");
 		$stmt->Execute();
 	} 
 	$updateAsset = "UPDATE items SET location = :location, warrantyExp = :warrantyExp, manufacturer = :manufacturer, price = :price, description = :description, retiredStatus = :retiredStatus, serialNum = :serialNum, currentUser = :currentUser WHERE itemID = :itemID";
-			$stmt = $dbh->prepare($insertQuery);
+			$stmt = $dbh->prepare($updateAsset);
 			$stmt->BindValue(":location", $_POST['location']);
-			$stmt->BindValue("warrantyExp", $_POST['warrantyExperiation']);
+			$stmt->BindValue("warrantyExp", $_POST['warrantyExp']);
 			$stmt->BindValue(":manufacturer", $_POST['manufacturer']);
 			$stmt->BindValue(":price", $_POST['price']);
 			$stmt->BindValue(":description", $_POST['description']);
@@ -21,7 +21,7 @@ require_once("../../config.php");
 			}else{
 				$stmt->BindValue(":retiredStatus", 0);
 			}
-			$stmt->BindValue(":serialNum", $_POST['serialNumber']);
+			$stmt->BindValue(":serialNum", $_POST['serialNum']);
 			$stmt->BindValue(":currentUser", $_POST['currentUser']);
 			$stmt->BindValue(":itemID", $_POST['itemID']);
 			$stmt->Execute();

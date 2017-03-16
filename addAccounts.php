@@ -16,7 +16,7 @@ $page = "newAcc";
     <link rel="icon" type="image/png" href="img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>AMS - RegionV</title>
+    <title>Add Account - AMS</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -76,8 +76,6 @@ $page = "newAcc";
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
     <script src="js/light-bootstrap-dashboard.js"></script>
 
-    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-    <script src="js/demo.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){

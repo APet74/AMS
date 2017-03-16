@@ -22,7 +22,7 @@ $item = getSingleObject($_POST['aID'], $dbh);
         <table>
         <tr><td><label>Warranty Experation:&nbsp;&nbsp;</label></td><td><input type="text" name="warrantyExp" <?php echo "value='{$item->get('warrantyExp')}'"; ?>></td></tr>
         <tr><td><label>Retired Status:</label></td><td>
-            <select name="reitredStatus">
+            <select name="retiredStatus">
                 <?php 
                     if($item->get("reitredStatus") == 1){
                         echo "<option value='yes'>Yes</option><option value='no'>No</option>";

@@ -34,12 +34,26 @@ $page = "Dashboard";
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="css/demo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+        <!--   Core JS Files   -->
+    <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!--  Checkbox, Radio & Switch Plugins -->
+    <script src="js/bootstrap-checkbox-radio-switch.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="js/bootstrap-notify.js"></script>
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+    <script src="js/light-bootstrap-dashboard.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
 </head>
 <body>
@@ -57,32 +71,11 @@ $page = "Dashboard";
 
 </body>
 
-    <!--   Core JS Files   -->
-    <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
-    <!--  Checkbox, Radio & Switch Plugins -->
-    <script src="js/bootstrap-checkbox-radio-switch.js"></script>
 
-    <!--  Charts Plugin -->
-    <script src="js/chartist.min.js"></script>
-
-    <!--  Notifications Plugin    -->
-    <script src="js/bootstrap-notify.js"></script>
-
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
-    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-    <script src="js/light-bootstrap-dashboard.js"></script>
-
-    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-    <script src="js/demo.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
-
-            demo.initChartist();
 
             $.notify({
                 icon: 'pe-7s-tools',
