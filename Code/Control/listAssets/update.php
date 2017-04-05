@@ -1,6 +1,8 @@
 <?php 
 session_start();
 require_once("../../config.php");
+require_once("../../resources/userAdmin.php");
+
 	if($_POST['computerName'] != ""){
 		$insertComputer = "UPDATE computers SET computerName = :computerName, operatingSys = :operatingSys WHERE computerID = :computerID";
 		$stmt = $dbh->prepare($insertComputer);
@@ -27,7 +29,7 @@ require_once("../../config.php");
 			$stmt->Execute();
 
 
-header("location: ../../listAssets.php?Msg=Completed Successfully");
+header("location: ../../listAssets.php?Msg=Updated Successfully");
 
 
 ?>

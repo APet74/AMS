@@ -41,7 +41,17 @@ $item = getSingleObject($_POST['aID'], $dbh);
         ?>
         <tr><td><label>Description:</label></td><td><textarea name='description' maxlength="4096"><?php echo $item->get("description"); ?></textarea></td></tr>
         <tr><td colspan="2"><input type="submit" name="submit" value="Update" class="btn btn-success"></td></tr>
+        
         </table>
     </div>
 </form>
+<div class="row">
+    <div class="col col-md-12">
+        <br>
+        <hr>
+        <br>
+        <center><b><p>If an asset is no longer in use but remains in the building in storage please do not delete the asset, deleting assets will remove all logs of that asset exisiting. Deleting should only be done if you find that you have entered the same asset twice or that an asset has been thrown out and you no longerw wish to keep the asset in the system.</p></b></center>
+        <center><a href="Control/listAssets/delete.php?ID=<?php echo $_POST['aID']; ?>" onclick="return confirm('Are you sure?')"><button class="btn btn-info" id="deleteAsset">Delete Asset</button></a></center>
+    </div>
+</div>
 </div>
