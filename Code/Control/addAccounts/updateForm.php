@@ -8,15 +8,15 @@ require_once("Control/queryFunctions.php");
         <h4>Update Password</h4>
         <table style="border-collapse: separate;border-spacing: 0 1em;">
             <tr>
-                <td><label>Account Username&nbsp;</label></td><td><select name="username" id="accountLevel">
+                <td><label>Account Username&nbsp;</label></td><td><select name="username" id="accountLevel" required>
                     <?php getAccounts($dbh); ?>
                 </select></td>
             </tr>
             <tr>
-                <td><label>New Password &nbsp;</label></td><td><input type="password" name="password" id="password"></td>
+                <td><label>New Password &nbsp;</label></td><td><input type="password" name="password" id="password" required maxlength="32"></td>
             </tr>
             <tr>
-                <td><label>Confirm Password</label></td><td><input type="password" name="passwordConf"></td>
+                <td><label>Confirm Password</label></td><td><input type="password" name="passwordConf" required maxlength="32"></td>
             </tr>
         </table>
             <input type="submit" name="submit" value="Update User" class="btn btn-info">
@@ -30,7 +30,7 @@ require_once("Control/queryFunctions.php");
         <h4>Delete Account</h4>
         <table style="border-collapse: separate;border-spacing: 0 1em;">
             <tr>
-                <td><label>Account Username&nbsp;</label></td><td><select name="username" id="accountLevel">
+                <td><label>Account Username&nbsp;</label></td><td><select name="username" id="accountLevel" required>
                     <?php getAccounts($dbh); ?>
                 </select></td>
             </tr>

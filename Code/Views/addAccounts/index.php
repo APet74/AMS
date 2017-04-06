@@ -88,23 +88,23 @@
                                         <form id="addForm" method="POST" action="Control/addAccounts/newAcc.php">
                                         <table style="border-collapse: separate;border-spacing: 0 1em;">
                                             <tr>
-                                                <td><label>Account Type&nbsp;</label></td><td><select name="accountLevel" id="accountLevel">
+                                                <td><label>Account Type&nbsp;</label></td><td><select name="accountLevel" id="accountLevel" required>
                                                     <option></option>
                                                     <option value=1> General</option>
                                                     <option value=2> Admin</option>
                                                 </select></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Email &nbsp;</label></td><td><input type="text" name="email" id="email"></td>
+                                                <td><label>Email &nbsp;</label></td><td><input type="text" name="email" id="email"  required maxlength="128"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Username &nbsp;</label></td><td><input type="text" name="username" id="username"></td>
+                                                <td><label>Username &nbsp;</label></td><td><input type="text" name="username" id="username" required maxlength="64"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Password &nbsp;</label></td><td><input type="password" name="password" id="password"></td>
+                                                <td><label>Password &nbsp;</label></td><td><input type="password" name="password" id="password" required maxlength="32"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Password Confirm &nbsp;</label></td><td><input type="passwordConf" name="password" id="password"></td>
+                                                <td><label>Password Confirm &nbsp;</label></td><td><input type="password" name="password" id="password" required maxlength="32"></td>
                                             </tr>
                                         </table>
                                             <input type="submit" name="submit" value="Add User" class="btn btn-danger">

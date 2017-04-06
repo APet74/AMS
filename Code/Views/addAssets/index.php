@@ -87,7 +87,7 @@
                                         <form id="addForm" method="POST" action="Control/addAssets/add.php">
                                         <table style="border-collapse: separate;border-spacing: 0 1em;">
                                             <tr>
-                                                <td><label>Item Type &nbsp;</label></td><td><select name="assetType" id="assetType">
+                                                <td><label>Item Type &nbsp;</label></td><td><select name="assetType" id="assetType" required>
                                                     <option></option>
                                                     <option value="BookShelves"> BookShelves</option><option value="Cart"> Cart</option>
                                                     <option value="Computer"> Computer</option>
@@ -110,34 +110,34 @@
                                                 </select></td>
                                             </tr>  
                                             <tr class="hideComputer" style="display:none;">
-                                                <td class="hideComputer" style="display:none;"><label class="hideComputer" style="display:none;">Computer Name &nbsp;</label></td><td><input type="text" name="computerName" id="computerName" class="computerName hideComputer" style="display:none;"></td>
+                                                <td class="hideComputer" style="display:none;"><label class="hideComputer" style="display:none;">Computer Name &nbsp;</label></td><td><input type="text" name="computerName" id="hiddenComputer" class="computerName hideComputer" style="display:none;" maxlength="512"></td>
                                             </tr>
                                             <tr class="hideComputer" style="display:none;">
-                                                <td class="hideComputer" style="display:none;"><label class="hideComputer" style="display:none;">Operating System &nbsp;</label></td><td><input type="text" name="operatingSystem" id="operatingSystem" class="operatingSystem hideComputer" style="display:none;"></td>
+                                                <td class="hideComputer" style="display:none;"><label class="hideComputer" style="display:none;">Operating System &nbsp;</label></td><td><input type="text" name="operatingSystem" id="hiddenComputer" class="operatingSystem hideComputer" style="display:none;" maxlength="512"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Location &nbsp;</label></td><td><input type="text" name="location" id="location" clas="location"></td>
+                                                <td><label>Location &nbsp;</label></td><td><input type="text" name="location" id="location" clas="location" required maxlength="256"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Current User &nbsp;</label></td><td><input type="text" name="currentUser" id="currentUser" clas="currentUser"></td>
+                                                <td><label>Current User &nbsp;</label></td><td><input type="text" name="currentUser" id="currentUser" clas="currentUser" maxlength="256" required></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Price &nbsp;</label></td><td><input type="text" name="price" id="price" clas="price"></td>
+                                                <td><label>Price &nbsp;</label></td><td><input type="text" maxlength="16" name="price" id="price" clas="price" required></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Serial Number &nbsp;</label></td><td><input type="text" name="serialNumber" id="serialNumber" clas="serialNumber"></td>
+                                                <td><label>Serial Number &nbsp;</label></td><td><input type="text" maxlength="256" name="serialNumber" id="serialNumber" clas="serialNumber"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Manufacturer &nbsp;</label></td><td><input type="text" name="manufacturer" id="manufacturer" class="manufacturer"></td>
+                                                <td><label>Manufacturer &nbsp;</label></td><td><input type="text" name="manufacturer" id="manufacturer" class="manufacturer" maxlength="256"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Warranty Experiation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td><td><input type="date" name="warrantyExperiation" id="warrantyExperiation" clas="warrantyExperiation"></td>
+                                                <td><label>Warranty Experiation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td><td><input type="date" name="warrantyExperiation" id="warrantyExperiation" class="warrantyExperiation" maxlength="256"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Description</label></td><td><textarea rows="5" cols="25" name="description"></textarea></td>
+                                                <td><label>Description</label></td><td><textarea rows="5" cols="25" name="description" maxlength="4096"></textarea></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Quantity</label></td><td><input type="text" name="quantity" class="quanity" id="quantity"></td>
+                                                <td><label>Quantity</label></td><td><input type="text" name="quantity" class="quanity" id="quantity" placeholder="1" maxlength="10"></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="2"><center><input type="submit" class="btn submitBtn" id="submitBtn" value="Add Asset"></center></td>
