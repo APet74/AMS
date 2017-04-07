@@ -104,7 +104,7 @@
                                                 <td><label>Password &nbsp;</label></td><td><input type="password" name="password" id="password" required maxlength="32"></td>
                                             </tr>
                                             <tr>
-                                                <td><label>Password Confirm &nbsp;</label></td><td><input type="password" name="password" id="password" required maxlength="32"></td>
+                                                <td><label>Password Confirm &nbsp;</label></td><td><input type="password" name="passwordConf" id="password" required maxlength="32"></td>
                                             </tr>
                                         </table>
                                             <input type="submit" name="submit" value="Add User" class="btn btn-danger">

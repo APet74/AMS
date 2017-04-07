@@ -11,11 +11,11 @@ $item = getSingleObject($_POST['aID'], $dbh);
         <input type="hidden" name="itemID" value="<?php echo $_POST['aID']; ?>">
         <table>
             <tr><td><label>Item Type:</label></td><td><input type="text" name="itemType" <?php echo "value='{$item->get('type')}'"; ?> disabled></td></tr>
-            <tr><td><label>Location:</label></td><td><input type="text" name="location" <?php echo "value='{$item->get('location')}'"; ?> required></td></tr>
-            <tr><td><label>Current User:</label></td><td><input type="text" name="currentUser" <?php echo "value='{$item->get('currentUser')}'"; ?> required></td></tr>
-            <tr><td><label>Price:</label></td><td><input type="text" name="price" <?php echo "value='{$item->get('price')}'"; ?> required></td></tr>
-            <tr><td><label>Manufacturer:</label></td><td><input type="text" name="manufacturer" <?php echo "value='{$item->get('manufacturer')}'"; ?>></td></tr>
-            <tr><td><label>Serial Number:&nbsp;&nbsp;</label></td><td><input type="text" name="serialNum" <?php echo "value='{$item->get('serialNum')}'"; ?>></td></tr>
+            <tr><td><label>Location:</label></td><td><input type="text" name="location" <?php echo "value='{$item->get('location')}'"; ?> required maxlength="256"></td></tr>
+            <tr><td><label>Current User:</label></td><td><input type="text" name="currentUser" <?php echo "value='{$item->get('currentUser')}'"; ?> required maxlength="256"></td></tr>
+            <tr><td><label>Price:</label></td><td><input type="text" name="price" <?php echo "value='{$item->get('price')}'"; ?> required maxlength="256"></td></tr>
+            <tr><td><label>Manufacturer:</label></td><td><input type="text" name="manufacturer" <?php echo "value='{$item->get('manufacturer')}'"; ?> maxlength="256"></td></tr>
+            <tr><td><label>Serial Number:&nbsp;&nbsp;</label></td><td><input type="text" name="serialNum" <?php echo "value='{$item->get('serialNum')}'"; ?> maxlength="256"></td></tr>
         </table>
     </div>
     <div class="col col-md-6">
@@ -35,11 +35,11 @@ $item = getSingleObject($_POST['aID'], $dbh);
         <?php
             if($item->get("computer") != NULL){
                 echo "<input type='hidden' name='computerID' value='{$item->get('computer')->get('computerID')}' >";
-                echo "<tr><td><label>Computer Name:</lable></td><td><input type='text' name='computerName' value='{$item->get('computer')->get('computerName')}' required></td></tr>";
-                echo "<tr><td><label>operating System:</label></td><td><input type='text' name='operatingSys' value='{$item->get('computer')->get('operatingSys')}' required></td></tr>";
+                echo "<tr><td><label>Computer Name:</lable></td><td><input type='text' name='computerName' value='{$item->get('computer')->get('computerName')}' required maxlength='512'></td></tr>";
+                echo "<tr><td><label>operating System:</label></td><td><input type='text' name='operatingSys' value='{$item->get('computer')->get('operatingSys')}' required maxlength='512'></td></tr>";
             }
         ?>
-        <tr><td><label>Description:</label></td><td><textarea name='description'><?php echo $item->get("description"); ?></textarea></td></tr>
+        <tr><td><label>Description:</label></td><td><textarea name='description' maxlength="4096"><?php echo $item->get("description"); ?></textarea></td></tr>
         <tr><td colspan="2"><input type="submit" name="submit" value="Update" class="btn btn-success"></td></tr>
         </table>
     </div>
