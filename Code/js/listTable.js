@@ -41,7 +41,8 @@ $().ready(function(){
             { "data": "location"},
             { "data": "currentUser"},
             { "data": "createdBy"},
-        ]
+        ],
+        
     });
     $('#assetTable tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');

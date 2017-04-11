@@ -42,6 +42,25 @@ $page = "list";
     <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
     <link href="css/DataTable/jquery.dataTables.min.css" rel="stylesheet" />
 
+
+        <!--   Core JS Files   -->
+    <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui/jquery-ui.min.js" type="Text/javascript"></script>
+    <script src="js/DataTable/datatables.min.js" type="text/javascript"></script>
+    <script src="js/listTable.js" type="text/javascript"></script>
+
+    <!--  Checkbox, Radio & Switch Plugins -->
+    <script src="js/bootstrap-checkbox-radio-switch.js"></script>
+
+
+    <!--  Notifications Plugin    -->
+    <script src="js/bootstrap-notify.js"></script>
+
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+    <script src="js/light-bootstrap-dashboard.js"></script>
+
 </head>
 <body>
 
@@ -51,10 +70,10 @@ $page = "list";
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title">Ticket: </h4>
+                  <h4 class="modal-title">Asset: </h4>
                 </div>
                 <div class="modal-body">
-                  <p>One fine body&hellip;</p>
+                  
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" id="close" data-dismiss="modal">Close</button>
@@ -74,25 +93,6 @@ $page = "list";
 
 </body>
 
-        <!--   Core JS Files   -->
-    <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery-ui.min.js" type="Text/javascript"></script>
-    <script src="js/DataTable/datatables.min.js" type="text/javascript"></script>
-	<script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/listTable.js" type="text/javascript"></script>
-
-	<!--  Checkbox, Radio & Switch Plugins -->
-	<script src="js/bootstrap-checkbox-radio-switch.js"></script>
-
-	<!--  Charts Plugin -->
-	<script src="js/chartist.min.js"></script>
-
-    <!--  Notifications Plugin    -->
-    <script src="js/bootstrap-notify.js"></script>
-
-
-    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="js/light-bootstrap-dashboard.js"></script>
 
 
 
