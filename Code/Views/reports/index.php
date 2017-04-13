@@ -67,40 +67,40 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeOne">Asset Types:
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeOne"><i class="fa fa-list" aria-hidden="true"></i>&nbsp;Asset Types:
                                                 </a>
                                             </h4>
                                         </div>
                                         <div id="collapseThreeOne" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    <div class="col col-md-3"> <input type="checkbox" name="bookShelveC"> BookShelves</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="computerC"> Computer</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="confRoomChairC"> Conference Room Chair</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="confRoomTableC"> Conference Room Table</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> BookShelves</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Computer</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Conference Room Chair</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Conference Room Table</div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col col-md-3"> <input type="checkbox" name="credenzaC"> Credenza</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="deskC"> Desk</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="deskChairC"> Desk Chair</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="fileCab2C"> File Cabinet 2 Drawer</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Credenza</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Desk</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Desk Chair</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> File Cabinet 2 Drawer</div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col col-md-3"> <input type="checkbox" name="fileCab3C"> File Cabinet 3 Drawer</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="fileCab4C"> File Cabinet 4 Drawer</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="fileCab5C"> File Cabinet 5 Drawer</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="lampC"> Lamp</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> File Cabinet 3 Drawer</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> File Cabinet 4 Drawer</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> File Cabinet 5 Drawer</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Lamp</div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col col-md-3"> <input type="checkbox" name="laptopC"> Laptop</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="officeChairC"> Office Chair</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="phoneC"> Phone</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="printerC"> Printer</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Laptop</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Office Chair</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Phone</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Printer</div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col col-md-3"> <input type="checkbox" name="speakC"> Speaker</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="tableC"> Table</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="otherC"> Other</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Speaker</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Table</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Other</div>
                                                     <div class="col col-md-3"></div>
                                                 </div>
                                             </div>
@@ -109,7 +109,8 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeTwo">Entered By:
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeTwo">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Entered By:
                                                 </a>
                                             </h4>
                                         </div>
@@ -125,7 +126,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeThree">Location:
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeThree"><i class="fa fa-building" aria-hidden="true"></i>&nbsp;Location:
                                                 </a>
                                             </h4>
                                         </div>
@@ -140,71 +141,103 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeFour">Retired Status:
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeFour"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Retired Status:
                                                 </a>
                                             </h4>
                                         </div>
                                         <div id="collapseThreeFour" class="panel-collapse collapse">
-                                            <div class="panel-body">Retired Status:</div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="cl-md-12">
+                                                    <label>Retired: &nbsp;</label><select name="retiredStatus"><option></option><option value="1">Yes</option><option value="0">No</option></select>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeFive">Current User:
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeFive"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Current User:
                                                 </a>
                                             </h4>
                                         </div>
                                         <div id="collapseThreeFive" class="panel-collapse collapse">
-                                            <div class="panel-body"></div>
+                                            <div class="panel-body">
+                                                <?php
+                                                    require_once("Control/report/currentUsers.php");
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeSix">Price:
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeSix"><i class="fa fa-usd" aria-hidden="true"></i>&nbsp;Price:
                                                 </a>
                                             </h4>
                                         </div>
                                         <div id="collapseThreeSix" class="panel-collapse collapse">
-                                            <div class="panel-body"></div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <p><b>If you want assets greater than a certain price only fill in the first box, if you want assets less than a certain price only fill in the second box, if you want assets between a price fill in both boxes.</b></p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label>Price: &nbsp; </label><input type='text' name='priceLow' placeholder="Greater Than"> <b> &nbsp; < &nbsp; (Less than) &nbsp;</b><input type='text' name='priceHigh' placeholder="Less Than">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeSeven">Warrenty Status:
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeSeven"><i class="fa fa-bug" aria-hidden="true"></i>&nbsp;Warrenty Status:
                                                 </a>
                                             </h4>
                                         </div>
                                         <div id="collapseThreeSeven" class="panel-collapse collapse">
-                                            <div class="panel-body"></div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="cl-md-12">
+                                                    <label>Warrenty Status: &nbsp;</label><select name="warrentyStatus"><option></option><option value="1">Yes</option><option value="0">No</option></select>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeEight">Date Entered:
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeEight"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;Date Entered:
                                                 </a>
                                             </h4>
                                         </div>
                                         <div id="collapseThreeEight" class="panel-collapse collapse">
-                                            <div class="panel-body"></div>
+                                            <div class="panel-body">
+                                                <label>Date Entered: &nbsp; </label><input type='date' name='priceLow' value="2017-01-01"> <b> &nbsp; Between &nbsp; </b><input type='date' id="date" name='priceHigh' >
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeNine">Manufacturer:
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeNine"><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;Manufacturer:
                                                 </a>
                                             </h4>
                                         </div>
                                         <div id="collapseThreeNine" class="panel-collapse collapse">
-                                            <div class="panel-body"></div>
+                                            <div class="panel-body"><?php
+                                                    require_once("Control/report/manufacturers.php");
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
+                                <input type="submit" class="btn btn-danger" value='Generate Report'>
                             </div>
                             </div>
                         </div>

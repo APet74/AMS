@@ -14,7 +14,7 @@ $page = "Report";
 	<link rel="icon" type="image/png" href="img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Light Bootstrap Dashboard by Creative Tim</title>
+	<title>Reports - AMS </title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -76,9 +76,13 @@ $page = "Report";
 
 
     <script>
-        $().ready(function(){
-            demo.initGoogleMaps();
-        });
+    (function () {
+        var date = new Date().toISOString().substring(0, 10),
+        field = document.querySelector('#date');
+        field.value = date;
+        console.log(field.value);
+
+})()
     </script>
 
 </html>
