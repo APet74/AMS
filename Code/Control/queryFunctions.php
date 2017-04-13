@@ -260,12 +260,12 @@ function getSuperUsersReport($dbh){
 				echo "<input type='checkbox' name='{$user['username']}'> {$user['username']}";
 				echo "</div>";
 			}
-			
+			$termCount++;
 			if($termCount == 6){
 				$termCount = 0;
 				echo "</div>";
 			}
-			$termCount++;
+			
 			$count++;
 		}
 		if($termCount != 0){
@@ -298,7 +298,7 @@ function getLocationsReport($dbh){
 			echo "<div class='row'>";
 				echo "<div class='col-md-2>";
 					foreach($locs as $loc){
-						echo "<input type='checkbox' name='{$loc['location']}'> {$loc['location']}";
+						echo "<input type='checkbox' name='{$loc}'> {$loc}";
 					}		
 				echo "</div>";
 				echo "<div class='col-md-2'></div>";
@@ -309,7 +309,7 @@ function getLocationsReport($dbh){
 				
 					foreach($locs as $loc){
 						echo "<div class='col-md-{$colNum}'>";
-						echo "<input type='checkbox' name='{$loc['location']}'> {$loc['location']}";
+						echo "<input type='checkbox' name='{$loc}'> {$loc}";
 						echo "</div>";
 					}		
 
@@ -322,19 +322,19 @@ function getLocationsReport($dbh){
 			if($count == 0 || ($count % 6) == 0){
 				echo "<div class='row'>";
 					echo "<div class='col-md-2'>";
-					echo "<input type='checkbox' name='{$loc['location']}'> {$loc['locatiom']}";
+					echo "<input type='checkbox' name='{$loc}'> {$loc}";
 					echo "</div>";
 			}else{
 				echo "<div class='col-md-2'>";
-				echo "<input type='checkbox' name='{$loc['location']}'> {$loc['location']}";
+				echo "<input type='checkbox' name='{$loc}'> {$loc}";
 				echo "</div>";
 			}
-			
+			$termCount++;
 			if($termCount == 6){
 				$termCount = 0;
 				echo "</div>";
 			}
-			$termCount++;
+			
 			$count++;
 		}
 		if($termCount != 0){
