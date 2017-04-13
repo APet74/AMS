@@ -260,7 +260,7 @@ function getSuperUsersReport($dbh){
 				echo "<input type='checkbox' name='{$user['username']}'> {$user['username']}";
 				echo "</div>";
 			}
-			$termCount++;
+			$termCount++; 
 			if($termCount == 6){
 				$termCount = 0;
 				echo "</div>";
@@ -289,6 +289,7 @@ function getLocationsReport($dbh){
 	}
 	
 	$locs = array_unique($locsArr);
+	sort($locs);
 	$counter = 0;
 	foreach ($locs as $loc) {
 		$counter++;
