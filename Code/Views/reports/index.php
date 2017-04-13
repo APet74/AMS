@@ -114,7 +114,12 @@
                                             </h4>
                                         </div>
                                         <div id="collapseThreeTwo" class="panel-collapse collapse">
-                                            <div class="panel-body">Entered By:</div>
+                                            <div class="panel-body">
+                                                
+                                                <?php
+                                                    require_once("Control/report/superUser.php");
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
@@ -125,7 +130,11 @@
                                             </h4>
                                         </div>
                                         <div id="collapseThreeThree" class="panel-collapse collapse">
-                                            <div class="panel-body">Location:</div>
+                                            <div class="panel-body">
+                                                <?php
+                                                    require_once("Control/report/Locs.php");
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="panel panel-default">

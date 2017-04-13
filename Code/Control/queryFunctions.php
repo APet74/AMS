@@ -215,4 +215,135 @@ function getAccounts($dbh){
 	}
 }
 
+function getSuperUsersReport($dbh){
+	$selectUsers = "SELECT username FROM users WHERE accountLevel = 2";
+	$stmt = $dbh->prepare($selectUsers);
+	$stmt->execute();
+	$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$counter = 0;
+	foreach ($users as $user) {
+		$counter++;
+	}
+	if ($counter <= 6){
+		if($counter == 5){
+			echo "<div class='row'>";
+				echo "<div class='col-md-2>";
+					foreach($users as $user){
+						echo "<input type='checkbox' name='{$user['username']}'> {$user['username']}";
+					}		
+				echo "</div>";
+				echo "<div class='col-md-2'></div>";
+			echo "</div>";
+		}else{
+			$colNum = 12 / $counter;
+			echo "<div class='row'>";
+				
+					foreach($users as $user){
+						echo "<div class='col-md-{$colNum}'>";
+						echo "<input type='checkbox' name='{$user['username']}'> {$user['username']}";
+						echo "</div>";
+					}		
+
+			echo "</div>";
+		}
+	}else{
+		$count = 0;
+		$termCount = 0;
+		foreach($users as $user){
+			if($count == 0 || ($count % 6) == 0){
+				echo "<div class='row'>";
+					echo "<div class='col-md-2'>";
+					echo "<input type='checkbox' name='{$user['username']}'> {$user['username']}";
+					echo "</div>";
+			}else{
+				echo "<div class='col-md-2'>";
+				echo "<input type='checkbox' name='{$user['username']}'> {$user['username']}";
+				echo "</div>";
+			}
+			
+			if($termCount == 6){
+				$termCount = 0;
+				echo "</div>";
+			}
+			$termCount++;
+			$count++;
+		}
+		if($termCount != 0){
+			$j = 6 - $termCount;
+			for($i = 0; $i < $j; $i++){
+				echo "<div class='col-md-2'></div>";
+			}
+			echo "</div>";
+		}
+	}
+}
+
+function getLocationsReport($dbh){
+	$selectUsers = "SELECT location FROM items";
+	$stmt = $dbh->prepare($selectUsers);
+	$stmt->execute();
+	$locsArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$locsArr = array();
+	foreach($locsArray as $arrayItem){
+		array_push($locsArr, $arrayItem["location"]);
+	}
+	
+	$locs = array_unique($locsArr);
+	$counter = 0;
+	foreach ($locs as $loc) {
+		$counter++;
+	}
+	if ($counter <= 6){
+		if($counter == 5){
+			echo "<div class='row'>";
+				echo "<div class='col-md-2>";
+					foreach($locs as $loc){
+						echo "<input type='checkbox' name='{$loc['location']}'> {$loc['location']}";
+					}		
+				echo "</div>";
+				echo "<div class='col-md-2'></div>";
+			echo "</div>";
+		}else{
+			$colNum = 12 / $counter;
+			echo "<div class='row'>";
+				
+					foreach($locs as $loc){
+						echo "<div class='col-md-{$colNum}'>";
+						echo "<input type='checkbox' name='{$loc['location']}'> {$loc['location']}";
+						echo "</div>";
+					}		
+
+			echo "</div>";
+		}
+	}else{
+		$count = 0;
+		$termCount = 0;
+		foreach($locs as $loc){
+			if($count == 0 || ($count % 6) == 0){
+				echo "<div class='row'>";
+					echo "<div class='col-md-2'>";
+					echo "<input type='checkbox' name='{$loc['location']}'> {$loc['locatiom']}";
+					echo "</div>";
+			}else{
+				echo "<div class='col-md-2'>";
+				echo "<input type='checkbox' name='{$loc['location']}'> {$loc['location']}";
+				echo "</div>";
+			}
+			
+			if($termCount == 6){
+				$termCount = 0;
+				echo "</div>";
+			}
+			$termCount++;
+			$count++;
+		}
+		if($termCount != 0){
+			$j = 6 - $termCount;
+			for($i = 0; $i < $j; $i++){
+				echo "<div class='col-md-2'></div>";
+			}
+			echo "</div>";
+		}
+	}
+}
 ?>
