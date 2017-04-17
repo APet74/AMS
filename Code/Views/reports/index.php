@@ -51,7 +51,7 @@
                             <div class="panel-body">Panel 1</div>
                         </div>
                     </div>
-                    <form method="POST" action="creport.php">
+                    <form method="POST" action="Control/report/creport.php">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -74,33 +74,33 @@
                                         <div id="collapseThreeOne" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> BookShelves</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Computer</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Conference Room Chair</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Conference Room Table</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="BookShelves"> BookShelves</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Computer"> Computer</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Conference Room Chair"> Conference Room Chair</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Conference Room Table"> Conference Room Table</div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Credenza</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Desk</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Desk Chair</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> File Cabinet 2 Drawer</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Credenza"> Credenza</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Desk"> Desk</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Desk Chair"> Desk Chair</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="File Cabinet 2 Drawer"> File Cabinet 2 Drawer</div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> File Cabinet 3 Drawer</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> File Cabinet 4 Drawer</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> File Cabinet 5 Drawer</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Lamp</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="File Cabinet 3 Drawer"> File Cabinet 3 Drawer</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="File Cabinet 4 Drawer"> File Cabinet 4 Drawer</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="File Cabinet 5 Drawer"> File Cabinet 5 Drawer</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Lamp"> Lamp</div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Laptop</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Office Chair</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Phone</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Printer</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Laptop"> Laptop</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Office Chair"> Office Chair</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Phone"> Phone</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Printer"> Printer</div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Speaker</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Table</div>
-                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]"> Other</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Speaker"> Speaker</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Table"> Table</div>
+                                                    <div class="col col-md-3"> <input type="checkbox" name="type[]" value="Other"> Other</div>
                                                     <div class="col col-md-3"></div>
                                                 </div>
                                             </div>
@@ -218,7 +218,7 @@
                                         </div>
                                         <div id="collapseThreeEight" class="panel-collapse collapse">
                                             <div class="panel-body">
-                                                <label>Date Entered: &nbsp; </label><input type='date' name='priceLow' value="2017-01-01"> <b> &nbsp; Between &nbsp; </b><input type='date' id="date" name='priceHigh' >
+                                                <label>Date Entered: &nbsp; </label><input type='date' name='dateFirst' value="2017-01-01"> <b> &nbsp; Between &nbsp; </b><input type='date' id="date" name='dateSecond' >
                                             </div>
                                         </div>
                                     </div>

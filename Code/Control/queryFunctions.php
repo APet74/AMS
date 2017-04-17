@@ -229,7 +229,7 @@ function getSuperUsersReport($dbh){
 			echo "<div class='row'>";
 				echo "<div class='col-md-2>";
 					foreach($users as $user){
-						echo "<input type='checkbox' name='enteredBy[]'> {$user['username']}";
+						echo "<input type='checkbox' name='enteredBy[]' value='{$user['username']}'> {$user['username']}";
 					}		
 				echo "</div>";
 				echo "<div class='col-md-2'></div>";
@@ -240,7 +240,7 @@ function getSuperUsersReport($dbh){
 				
 					foreach($users as $user){
 						echo "<div class='col-md-{$colNum}'>";
-						echo "<input type='checkbox' name='enteredBy[]'> {$user['username']}";
+						echo "<input type='checkbox' name='enteredBy[]' value='{$user['username']}'> {$user['username']}";
 						echo "</div>";
 					}		
 
@@ -253,11 +253,11 @@ function getSuperUsersReport($dbh){
 			if($count == 0 || ($count % 6) == 0){
 				echo "<div class='row'>";
 					echo "<div class='col-md-2'>";
-					echo "<input type='checkbox' name='enteredBy[]'> {$user['username']}";
+					echo "<input type='checkbox' name='enteredBy[]' value='{$user['username']}'> {$user['username']}";
 					echo "</div>";
 			}else{
 				echo "<div class='col-md-2'>";
-				echo "<input type='checkbox' name='enteredBy[]'> {$user['username']}";
+				echo "<input type='checkbox' name='enteredBy[]' value='{$user['username']}'> {$user['username']}";
 				echo "</div>";
 			}
 			$termCount++; 
@@ -299,7 +299,7 @@ function getLocationsReport($dbh){
 			echo "<div class='row'>";
 				echo "<div class='col-md-2>";
 					foreach($locs as $loc){
-						echo "<input type='checkbox' name='location[]'> {$loc}";
+						echo "<input type='checkbox' name='location[]' value='{$loc}'> {$loc}";
 					}		
 				echo "</div>";
 				echo "<div class='col-md-2'></div>";
@@ -310,7 +310,7 @@ function getLocationsReport($dbh){
 				
 					foreach($locs as $loc){
 						echo "<div class='col-md-{$colNum}'>";
-						echo "<input type='checkbox' name='location[]'> {$loc}";
+						echo "<input type='checkbox' name='location[]' value='{$loc}'> {$loc}";
 						echo "</div>";
 					}		
 
@@ -323,11 +323,11 @@ function getLocationsReport($dbh){
 			if($count == 0 || ($count % 6) == 0){
 				echo "<div class='row'>";
 					echo "<div class='col-md-2'>";
-					echo "<input type='checkbox' name='location[]'> {$loc}";
+					echo "<input type='checkbox' name='location[]' value='{$loc}'> {$loc}";
 					echo "</div>";
 			}else{
 				echo "<div class='col-md-2'>";
-				echo "<input type='checkbox' name='location[]'> {$loc}";
+				echo "<input type='checkbox' name='location[]' value='{$loc}'> {$loc}";
 				echo "</div>";
 			}
 			$termCount++;
@@ -369,7 +369,7 @@ function getCurrUsersReport($dbh){
 			echo "<div class='row'>";
 				echo "<div class='col-md-2>";
 					foreach($users as $user){
-						echo "<input type='checkbox' name='currentUser[]'> {$user}";
+						echo "<input type='checkbox' name='currentUser[]' value='{$user}'> {$user}";
 					}		
 				echo "</div>";
 				echo "<div class='col-md-2'></div>";
@@ -380,7 +380,7 @@ function getCurrUsersReport($dbh){
 				
 					foreach($users as $user){
 						echo "<div class='col-md-{$colNum}'>";
-						echo "<input type='checkbox' name='currentUser[]'> {$user}";
+						echo "<input type='checkbox' name='currentUser[]' value='{$user}'> {$user}";
 						echo "</div>";
 					}		
 
@@ -393,11 +393,11 @@ function getCurrUsersReport($dbh){
 			if($count == 0 || ($count % 6) == 0){
 				echo "<div class='row'>";
 					echo "<div class='col-md-2'>";
-					echo "<input type='checkbox' name='currentUser[]'> {$user}";
+					echo "<input type='checkbox' name='currentUser[]' value='{$user}'> {$user}";
 					echo "</div>";
 			}else{
 				echo "<div class='col-md-2'>";
-				echo "<input type='checkbox' name='currentUser[]'> {$user}";
+				echo "<input type='checkbox' name='currentUser[]' value='{$user}'> {$user}";
 				echo "</div>";
 			}
 			$termCount++;
@@ -439,7 +439,7 @@ function getManufacturersReport($dbh){
 			echo "<div class='row'>";
 				echo "<div class='col-md-2>";
 					foreach($mans as $man){
-						echo "<input type='checkbox' name='manufacturer[]'> {$man}";
+						echo "<input type='checkbox' name='manufacturer[]' value='{$man}'> {$man}";
 					}		
 				echo "</div>";
 				echo "<div class='col-md-2'></div>";
@@ -450,7 +450,7 @@ function getManufacturersReport($dbh){
 				
 					foreach($mans as $man){
 						echo "<div class='col-md-{$colNum}'>";
-						echo "<input type='checkbox' name='manufacturer[]'> {$man}";
+						echo "<input type='checkbox' name='manufacturer[]' value='{$man}'> {$man}";
 						echo "</div>";
 					}		
 
@@ -463,11 +463,11 @@ function getManufacturersReport($dbh){
 			if($count == 0 || ($count % 6) == 0){
 				echo "<div class='row'>";
 					echo "<div class='col-md-2'>";
-					echo "<input type='checkbox' name='manufacturer[]'> {$man}";
+					echo "<input type='checkbox' name='manufacturer[]' value='{$man}'> {$man}";
 					echo "</div>";
 			}else{
 				echo "<div class='col-md-2'>";
-				echo "<input type='checkbox' name='manufacturer[]'> {$man}";
+				echo "<input type='checkbox' name='manufacturer[]' value='{$man}'> {$man}";
 				echo "</div>";
 			}
 			$termCount++;
