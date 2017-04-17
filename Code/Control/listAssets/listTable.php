@@ -6,7 +6,7 @@ $arrayOfItems = arrayItemObjects($dbh);
 // 	echo "<br>";
 // 	echo "<br>";
 // }
-$data = generateAjax($arrayOfItems);
+$data = generateAjax($arrayOfItems, "txt/ajaxList.txt");
 
 ?>
 

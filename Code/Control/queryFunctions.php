@@ -68,9 +68,34 @@ function getSingleObject($aID ,$dbh){
 	    return $asset;
 }
 
-function generateAjax($objects){
+function getArrayOfObjectsByID($arrayOfIds, $dbh){
+	$arrayOfObjs = array();
+	foreach($arrayOfIds as $id){
+		$selectQuery = "SELECT * FROM items WHERE itemID = :itemID";
+		$stmt = $dbh->prepare($selectQuery);
+		$stmt->bindValue(":itemID", $id['itemID']);
+		$stmt->execute();
+		$item = $stmt->fetch(PDO::FETCH_ASSOC);
+		if($item['computerID'] != 0){
+			$selectComputerQuery = "SELECT * FROM computers WHERE computerID = :computerID";
+			$query = $dbh->prepare($selectComputerQuery);
+			$query->bindValue("computerID", $item['computerID']);
+			$query->execute();
+			$computer = $query->fetch(PDO::FETCH_ASSOC);
+			$pcObj = new computer($computer);
+		}else{
+			$pcObj = NULL;
+		}
+		$asset = new asset($item, $pcObj);
+		array_push($arrayOfObjs, $asset);
+
+	}
+	return $arrayOfObjs;
+}
+
+function generateAjax($objects, $fileName){
 	$result = count($objects);
-	$fileM = fopen("txt/ajaxList.txt", "w");
+	$fileM = fopen($fileName, "w");
 	$topLine = "{\n\t\"data\": [";
 	fwrite($fileM, $topLine);
 	$i = 0;
