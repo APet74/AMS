@@ -1,4 +1,7 @@
 <?php
+require_once("../../config.php");
+require_once("../../resources/userAdmin.php");
+
 $bindArray = array();
 $bindArrayConstrants = array();
 if(isset($_POST['type'])){
@@ -6,10 +9,10 @@ if(isset($_POST['type'])){
 	$counter = 0;
 	$max = count($_POST['type']);
 	foreach( $_POST['type'] as $v ) {
-	    $sqlBuilderType .= "type = :{$v}";
+		$vB = preg_replace('/[^\w]+/', '_', $v);
+	    $sqlBuilderType .= "type = :{$vB}";
 	    $counter++;
-	    array_push($bindArray, ":{$v}");
-	    array_push($bindArrayConstrants, "{$v}");
+	    $bindArray[':' . $vB] = $v;
 		if($max != 1 && $counter != $max){
 			$sqlBuilderType .= " OR ";
 		}
@@ -25,10 +28,10 @@ if(isset($_POST['enteredBy'])){
 	$counter = 0;
 	$max = count($_POST['enteredBy']);
 	foreach( $_POST['enteredBy'] as $v ) {
-	    $sqlBuilderEntered .= "type = :{$v}";
+		$vB = preg_replace('/[^\w]+/', '_', $v);
+	    $sqlBuilderEntered .= "createdBy = :{$vB}";
 	    $counter++;
-	    array_push($bindArray, ":{$v}");
-	    array_push($bindArrayConstrants, "{$v}");
+	    $bindArray[':' . $vB] = $v;
 		if($max != 1 && $counter != $max){
 			$sqlBuilderEntered .= " OR ";
 		}
@@ -45,10 +48,10 @@ if(isset($_POST['location'])){
 	$counter = 0;
 	$max = count($_POST['location']);
 	foreach( $_POST['location'] as $v ) {
-	    $sqlBuilderLoc .= "location = :{$v}";
+		$vB = preg_replace('/[^\w]+/', '_', $v);
+	    $sqlBuilderLoc .= "location = :{$vB}";
 	    $counter++;
-	    array_push($bindArray, ":{$v}");
-	    array_push($bindArrayConstrants, "{$v}");
+	    $bindArray[':' . $vB] = $v;
 		if($max != 1 && $counter != $max){
 			$sqlBuilderLoc .= " OR ";
 		}
@@ -65,10 +68,10 @@ if(isset($_POST['currentUser'])){
 	$counter = 0;
 	$max = count($_POST['currentUser']);
 	foreach( $_POST['currentUser'] as $v ) {
-	    $sqlBuilderCurrUser .= "currentUser = :{$v}";
+		$vB = preg_replace('/[^\w]+/', '_', $v);
+	    $sqlBuilderCurrUser .= "currentUser = :{$vB}";
 	    $counter++;
-	    array_push($bindArray, ":{$v}");
-	    array_push($bindArrayConstrants, "{$v}");
+	    $bindArray[':' . $vB] = $v;
 		if($max != 1 && $counter != $max){
 			$sqlBuilderCurrUser .= " OR ";
 		}
@@ -85,10 +88,13 @@ if(isset($_POST['manufacturer'])){
 	$counter = 0;
 	$max = count($_POST['manufacturer']);
 	foreach( $_POST['manufacturer'] as $v ) {
-	    $sqlBuilderMan .= "manufacturer = :{$v}";
+		$vB = preg_replace('/[^\w]+/', '_', $v);
+		if($vB == ""){
+			$vB = "notSet";
+		}
+	    $sqlBuilderMan .= "manufacturer = :{$vB}";
 	    $counter++;
-	    array_push($bindArray, ":{$v}");
-	    array_push($bindArrayConstrants, "{$v}");
+	    $bindArray[':' . $vB] = $v;
 		if($max != 1 && $counter != $max){
 			$sqlBuilderMan .= " OR ";
 		}
@@ -101,39 +107,39 @@ if(isset($_POST['manufacturer'])){
 
 if($_POST['retiredStatus'] != ""){
 	$sqlBuilderRetired = "retiredStatus = :retired";
-    array_push($bindArray, ":retired");
-	array_push($bindArrayConstrants, "{$_POST['retiredStatus']}");
+	$retired = ":retired";
+	$bindArray[$retired] = $_POST['retiredStatus'];
 }else{
 	$sqlBuilderRetired = "1 = 1";
 }
-if(isset($_POST['priceLow'])){
-	$sqlBuilderPriceLow = "price <= :priceLow";
-	array_push($bindArray, ":priceLow");
-	array_push($bindArrayConstrants, "{$_POST['priceLow']}");
+if($_POST['priceLow'] != ""){
+	$sqlBuilderPriceLow = "price >= :priceLow";
+	$priceLow = ":priceLow";
+	$bindArray[$priceLow] = $_POST['priceLow'];
 }else{
 	$sqlBuilderPriceLow = "1 = 1";
 }
 
-if(isset($_POST['priceHigh'])){
-	$sqlBuilderPriceHigh = "price >= :priceHigh";
-    array_push($bindArray, ":priceHigh");
-	array_push($bindArrayConstrants, "{$_POST['priceHigh']}");
+if($_POST['priceHigh'] != ""){
+	$sqlBuilderPriceHigh = "price <= :priceHigh";
+	$priceHigh = ":priceHigh";
+	$bindArray[$priceHigh] = $_POST['priceHigh'];
 }else{
 	$sqlBuilderPriceHigh = "1 = 1";
 }
 
 if(isset($_POST['dateFirst'])){
-	$sqlBuilderDateFirst = "dateEntered <= :dateFirst";
-    array_push($bindArray, ":dateFirst");
-	array_push($bindArrayConstrants, "{$_POST['dateFirst']}");
+	$sqlBuilderDateFirst = "dateEntered >= :dateFirst";
+	$dateFirst = ":dateFirst";
+	$bindArray[$dateFirst] = $_POST['dateFirst'];
 }else{
 	$sqlBuilderDateFirst = "1 = 1";
 }
 
 if(isset($_POST['dateSecond'])){
 	$sqlBuilderDateSecond = "dateEntered <= :dateSecond";
-    array_push($bindArray, ":dateSecond");
-	array_push($bindArrayConstrants, "{$_POST['dateSecond']}");
+	$dateSecond = ":dateSecond";
+	$bindArray[$dateSecond] = $_POST['dateSecond'];
 }else{
 	$sqlBuilderDateSecond = "1 = 1";
 }
@@ -143,17 +149,29 @@ if($_POST['warrentyStatus'] != ""){
 	$dateFirst = date_format($date, 'Y-m-d');
 	if($_POST['warrentyStatus'] == 1){
 		$sqlBuilderWarrStatus = "warrantyExp >= :warDateFirst";
-	    array_push($bindArray, ":warDateFirst");
-		array_push($bindArrayConstrants, "{$dateFirst}");
+		$warDateFirst = ":warDateFirst";
+		$bindArray[$warDateFirst] = $dateFirst;
 	}else{
 		$sqlBuilderWarrStatus = "warrantyExp <= :warDateSecond";
-	    array_push($bindArray, ":warDateSecond");
-		array_push($bindArrayConstrants, "{$dateFirst}");
+		$warDateSecond = ":warDateSecond";
+		$bindArray[$warDateSecond] = $dateFirst;
 	}
 }else{
 	$sqlBuilderWarrStatus = "1 = 1";
 }
 
-$stmtString = $sqlBuilderType . " AND " . $sqlBuilderLoc . " AND " . $sqlBuilderMan . " AND " . $sqlBuilderEntered . " AND " . $sqlBuilderRetired . " AND " . $sqlBuilderWarrStatus . " AND " . $sqlBuilderCurrUser . " AND " . $sqlBuilderPriceHigh . " AND " . $sqlBuilderPriceLow . " AND " . $sqlBuilderDateFirst . " AND " . $sqlBuilderDateSecond;
-echo $stmtString;
+$stmtString = $sqlBuilderType . " AND " . $sqlBuilderEntered . " AND " . $sqlBuilderLoc . " AND " . $sqlBuilderCurrUser . " AND " . $sqlBuilderMan . " AND " . $sqlBuilderRetired . " AND " . $sqlBuilderPriceLow . " AND " . $sqlBuilderPriceHigh. " AND " . $sqlBuilderDateFirst . " AND " . $sqlBuilderDateSecond . " AND " . $sqlBuilderWarrStatus;
+// 
+
+$fullSQL = "SELECT * FROM items WHERE " . $stmtString;
+echo "<br> {$fullSQL} <br><br>";
+echo $stmtString . "<br><br>";
+var_dump($bindArray);
+$stmt = $dbh->prepare($fullSQL);
+
+$stmt->execute($bindArray);
+$items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+echo "<br><br>";
+var_dump($items);
 ?>
