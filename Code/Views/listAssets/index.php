@@ -61,3 +61,10 @@
                     </div>
                 </div>
             </div>
+                <?php
+                
+                if($_SESSION['status'] == 2)
+                    require_once("printLabelsView.php");
+
+                ?>
+        </div>
