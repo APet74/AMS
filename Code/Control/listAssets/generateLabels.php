@@ -22,7 +22,7 @@ foreach($arrayOfObjs as $obj){
 			$computerName = "Property of RVS";
 		}
 		echo "<table>";
-		echo "<tr><td><img src='https://chart.googleapis.com/chart?chs=75x75&cht=qr&chl=http%3A%2F%2Fpetrzilkacoding.com/AMS/viewAsset.php?{$obj->get("itemID")}' /></td>";
+		echo "<tr><td><img src='https://chart.googleapis.com/chart?chs=75x75&cht=qr&chl=http%3A%2F%2Fpetrzilkacoding.com/AMS/viewAsset.php?id={$obj->get("itemID")}' /></td>";
 		echo "<td><img src='../../img/rvsLogo.png' width='100px' style='float:right;' /></td></tr>";
 		echo "<tr><td>{$obj->get('itemID')}</td><td><center>" . $computerName . "</center></td></tr></table>";
 		echo "</td>";
@@ -36,7 +36,7 @@ foreach($arrayOfObjs as $obj){
 			$computerName = "Property of RVS";
 		}
 		echo "<table>";
-		echo "<tr><td><img src='https://chart.googleapis.com/chart?chs=75x75&cht=qr&chl=http%3A%2F%2Fpetrzilkacoding.com/AMS/viewAsset.php?{$obj->get("itemID")}' /></td>";
+		echo "<tr><td><img src='https://chart.googleapis.com/chart?chs=75x75&cht=qr&chl=http%3A%2F%2Fpetrzilkacoding.com/AMS/viewAsset.php?id={$obj->get("itemID")}' /></td>";
 		echo "<td><img src='../../img/rvsLogo.png' width='100px' style='float:right;' /></td></tr>";
 		echo "<tr><td>{$obj->get('itemID')}</td><td><center>" . $computerName . "</center></td></tr></table>";
 		echo "</td>";
