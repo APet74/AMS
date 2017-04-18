@@ -161,12 +161,9 @@ if($_POST['warrentyStatus'] != ""){
 }
 
 $stmtString = $sqlBuilderType . " AND " . $sqlBuilderEntered . " AND " . $sqlBuilderLoc . " AND " . $sqlBuilderCurrUser . " AND " . $sqlBuilderMan . " AND " . $sqlBuilderRetired . " AND " . $sqlBuilderPriceLow . " AND " . $sqlBuilderPriceHigh. " AND " . $sqlBuilderDateFirst . " AND " . $sqlBuilderDateSecond . " AND " . $sqlBuilderWarrStatus;
-// 
 
 $fullSQL = "SELECT itemID FROM items WHERE " . $stmtString;
-echo "<br> {$fullSQL} <br><br>";
-echo $stmtString . "<br><br>";
-var_dump($bindArray);
+
 
 $stmt = $dbh->prepare($fullSQL);
 $stmt->execute($bindArray);
@@ -174,7 +171,6 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $arrayOfObjs = getArrayOfObjectsByID($items, $dbh);
 $data = generateAjax($arrayOfObjs, "../../txt/ajaxReport.txt");
+header("location:../../reportCustom.php");
 
-echo "<br><br>";
-var_dump($items);
 ?>
