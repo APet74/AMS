@@ -48,7 +48,13 @@
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse">
-                            <div class="panel-body">Panel 1</div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    <p><b>View All Computers: &nbsp;</b><a href="Control/report/viewComps.php"><button class="btn btn-info">Generate Report</button></a></p> 
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <form method="POST" action="Control/report/creport.php">

@@ -46,6 +46,11 @@ $page = "Report";
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/jquery-ui/jquery-ui.min.js" type="Text/javascript"></script>
     <script src="js/DataTable/datatables.min.js" type="text/javascript"></script>
+    <?php
+        echo $_SERVER['HTTP_REFERER'];
+        if($_SERVER['HTTP_REFERER'] == "")
+            echo "TEST";
+    ?>
     <script src="js/reportCustom.js" type="text/javascript"></script>
 
     <!--  Checkbox, Radio & Switch Plugins -->

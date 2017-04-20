@@ -7,7 +7,7 @@ require_once("../../resources/userAdmin.php");
 		$insertComputer = "UPDATE computers SET computerName = :computerName, operatingSys = :operatingSys WHERE computerID = :computerID";
 		$stmt = $dbh->prepare($insertComputer);
 		$stmt->BindValue(":computerName", $_POST['computerName']);
-		$stmt->BindValue(":operatingSys", $_POST['operatingSystem']);
+		$stmt->BindValue(":operatingSys", $_POST['operatingSys']);
 		$stmt->BindValue(":computerID", $_POST['computerID']);
 		$stmt->Execute();
 	} 
@@ -28,8 +28,10 @@ require_once("../../resources/userAdmin.php");
 			$stmt->BindValue(":itemID", $_POST['itemID']);
 			$stmt->Execute();
 
-
-header("location: ../../listAssets.php?Msg=Updated Successfully");
-
+if($_SERVER['HTTP_REFERER'] == "http://petrzilkacoding.com/AMS/listAssets.php")
+	header("location: ../../listAssets.php?Msg=Updated Successfully");
+else{
+	header("location: ../../viewAsset.php?Msg=Updated Successfully&id={$_POST['itemID']}");
+}
 
 ?>
