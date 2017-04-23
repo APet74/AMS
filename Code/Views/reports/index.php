@@ -155,7 +155,7 @@
                                             <div class="panel-body">
                                                 <div class="row">
                                                     <div class="cl-md-12">
-                                                    <label>Retired: &nbsp;</label><select name="retiredStatus"><option></option><option value="1">Yes</option><option value="0">No</option></select>
+                                                    <label>Retired: &nbsp;</label><select name="retiredStatus"><option></option><option value="0">No</option><option value="1">Yes</option></select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -201,7 +201,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeSeven"><i class="fa fa-bug" aria-hidden="true"></i>&nbsp;Warrenty Status:
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeSeven"><i class="fa fa-bug" aria-hidden="true"></i>&nbsp;Warranty Status:
                                                 </a>
                                             </h4>
                                         </div>
@@ -209,7 +209,7 @@
                                             <div class="panel-body">
                                                 <div class="row">
                                                     <div class="cl-md-12">
-                                                    <label>Warrenty Status: &nbsp;</label><select name="warrentyStatus"><option></option><option value="1">Yes</option><option value="0">No</option></select>
+                                                    <label>Warranty Status: &nbsp;</label><select name="warrentyStatus"><option></option><option value="1">In Warranty</option><option value="0">Out of Warranty</option></select>
                                                     </div>
                                                 </div>
                                             </div>
