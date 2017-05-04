@@ -3,6 +3,7 @@
 require_once '../resources/ticketGroup.php';
 require_once '../resources/dbConn.php'; 
 */
+session_start();
 $page = "view";
 
 ?>
